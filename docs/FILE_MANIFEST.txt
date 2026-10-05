@@ -1,0 +1,12 @@
+.gitignore
+CHANGELOG.md
+PUBLIC_DISCLOSURE.md
+README.md
+architecture-public/ARCHITECTURE_OVERVIEW.md
+docs/FILE_MANIFEST.txt
+docs/TEMPORARY_PUBLICATION_CHECKLIST.md
+docs/TOR_SUMMARY_PUBLIC.md
+project-management/PROJECT_MASTER_PLAN_PUBLIC.md
+roadmap/ROADMAP.md
+scripts/make-private.sh
+scripts/publish-public.sh
