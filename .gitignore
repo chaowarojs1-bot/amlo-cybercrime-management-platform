@@ -1,0 +1,46 @@
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+secrets/
+credentials/
+
+# Local / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Logs and temp
+*.log
+tmp/
+temp/
+.cache/
+
+# Runtime / build artifacts
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# Internal project artifacts that must not be published
+*.mpp
+*.bak
+*.dump
+*.sql
+internal/
+private/
+production-config/
+security-findings/
+raw-data/
+case-data/
