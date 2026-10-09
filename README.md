@@ -11,15 +11,17 @@ Public / sanitized planning repository for the **AMLO Cybercrime Management Plat
 - Business approval, Product Owner, personnel assignment, sprint commitment, Story Points and final calendar baseline are pending validation.
 
 ## Start here — Scrum Framework
-1. [Scrum operating model and accountabilities](./project-management/SCRUM_OPERATING_MODEL_PUBLIC.md)
-2. [Product Backlog register — 16 Epics / 11 TOR functional areas + cross-cutting work](./project-management/PRODUCT_BACKLOG_REGISTER_PUBLIC.md)
-3. [17 Sprint proposed roadmap](./project-management/SPRINT_ROADMAP_PUBLIC.md)
-4. [Definition of Ready / Definition of Done](./project-management/DEFINITION_OF_READY_DONE_PUBLIC.md)
-5. [Cross-team dependencies and RAID](./project-management/DEPENDENCY_RISK_REGISTER_PUBLIC.md)
-6. [TOR release/acceptance gates](./project-management/RELEASE_ACCEPTANCE_PUBLIC.md)
-7. [Scrum meetings and quality metrics](./project-management/SCRUM_CEREMONIES_METRICS_PUBLIC.md)
-8. [TOR traceability capability index](./project-management/TOR_TRACEABILITY_PUBLIC.md)
-9. [GitHub Projects v2 board setup blueprint](./project-management/GITHUB_PROJECT_BOARD_SETUP_PUBLIC.md)
+1. [Program Master Board — static launch view](./project-management/PROGRAM_MASTER_BOARD_PUBLIC.md)
+2. [17 Sprint issue register](./project-management/SPRINT_ISSUE_REGISTER_PUBLIC.md)
+3. [Scrum operating model and accountabilities](./project-management/SCRUM_OPERATING_MODEL_PUBLIC.md)
+4. [Product Backlog register — 16 Epics / 11 TOR functional areas + cross-cutting work](./project-management/PRODUCT_BACKLOG_REGISTER_PUBLIC.md)
+5. [17 Sprint proposed roadmap](./project-management/SPRINT_ROADMAP_PUBLIC.md)
+6. [Definition of Ready / Definition of Done](./project-management/DEFINITION_OF_READY_DONE_PUBLIC.md)
+7. [Cross-team dependencies and RAID](./project-management/DEPENDENCY_RISK_REGISTER_PUBLIC.md)
+8. [TOR release/acceptance gates](./project-management/RELEASE_ACCEPTANCE_PUBLIC.md)
+9. [Scrum meetings and quality metrics](./project-management/SCRUM_CEREMONIES_METRICS_PUBLIC.md)
+10. [TOR traceability capability index](./project-management/TOR_TRACEABILITY_PUBLIC.md)
+11. [GitHub Projects v2 board setup blueprint](./project-management/GITHUB_PROJECT_BOARD_SETUP_PUBLIC.md)
 
 ## Live planning work in GitHub Issues
 - [All open planning issues](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues?q=is%3Aissue+is%3Aopen)
