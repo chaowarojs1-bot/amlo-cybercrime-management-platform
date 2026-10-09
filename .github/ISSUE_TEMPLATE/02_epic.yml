@@ -1,0 +1,45 @@
+name: "Scrum Epic (Public)"
+description: "Describe a product outcome that will be split into smaller backlog items"
+title: "[EPIC][Squad] "
+body:
+  - type: markdown
+    attributes:
+      value: "PUBLIC repository. High-level product capability only; never include real records, confidential contracts, internal endpoints or security findings."
+  - type: input
+    id: product_goal
+    attributes:
+      label: Product Goal contribution
+      placeholder: "How this Epic advances the AMLO Product Goal"
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Business outcome and scope
+      placeholder: "Capabilities, boundaries, stakeholders"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Epic exit criteria
+      placeholder: "- [ ] Verifiable business outcome..."
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Cross-team interfaces and dependencies
+      placeholder: "Link issues, describe safe dependency decisions"
+  - type: input
+    id: gate
+    attributes:
+      label: Expected TOR gate (planning)
+      placeholder: "D120/D210; not contractual acceptance"
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: "Only public-safe planning details are included."
+          required: true
