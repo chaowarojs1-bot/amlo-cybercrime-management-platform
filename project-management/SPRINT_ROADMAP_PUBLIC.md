@@ -1,54 +1,40 @@
-# Sprint Roadmap — proposed 14-day synchronized cadence
+# แผน Sprint Roadmap จำนวน 17 รอบ
 
-> This is a forecast for refinement. **Only Sprint Planning creates a Sprint Backlog and Sprint Goal**. The Scrum Team must account for staffing, real capacity and current Product Backlog. No start date has been contractually confirmed.
+> แผนนี้เป็นการคาดการณ์ ไม่ใช่ Sprint Goal ที่ตกลงแล้ว Sprint Backlog ต้องกำหนดร่วมกันระหว่าง Sprint Planning ตามความพร้อมของทีม
 
-## Timeline
-- Existing public project schedule uses **1 Oct 2026 as planning baseline only**, not asserted actual contract commencement.
-- D1–D238: 17 sequential 14-calendar-day Sprint planning windows.
-- D239–D240: contractual closeout/acceptance buffer, not a substitute for an extra unofficial Sprint.
-- Do not pre-assign teams or Story Points until Scrum roles and staffing confirmed.
-
-| Sprint | Contract days | Indicative dates* | Proposed review theme (subject to Sprint Goal) |
+| Sprint | วันตามสัญญา | วันที่สมมติ | หัวข้อเสนอสำหรับสาธิต |
 |---|---|---|---|
-| S01 | D1–D14 | 2026-10-01 – 2026-10-14 | Product goal, ownership, kickoff, initial requirement intake |
-| S02 | D15–D28 | 2026-10-15 – 2026-10-28 | Source contracts, security baseline, environment decisions |
-| S03 | D29–D42 | 2026-10-29 – 2026-11-11 | D30/M1 package; user journeys and validation plan |
-| S04 | D43–D56 | 2026-11-12 – 2026-11-25 | SRS/architecture working slices, OCR, case states |
-| S05 | D57–D70 | 2026-11-26 – 2026-12-09 | Data/entity models and prototype walkthrough |
-| S06 | D71–D84 | 2026-12-10 – 2026-12-23 | Claim prototype, shared configuration and notification events |
-| S07 | D85–D98 | 2026-12-24 – 2027-01-06 | Integrated ingestion and case record slice |
-| S08 | D99–D112 | 2027-01-07 – 2027-01-20 | Case history, access controls and early notification slice |
-| S09 | D113–D126 | 2027-01-21 – 2027-02-03 | D120/M2 baseline; usable demo and approved design package |
-| S10 | D127–D140 | 2027-02-04 – 2027-02-17 | Graph exploration and calculation preview |
-| S11 | D141–D154 | 2027-02-18 – 2027-03-03 | Integrated data reconciliation, first reports/analytics |
-| S12 | D155–D168 | 2027-03-04 – 2027-03-17 | Claim review and return approval vertical slice |
-| S13 | D169–D182 | 2027-03-18 – 2027-03-31 | Feature-complete target D175; report/dashboard/SIT breadth |
-| S14 | D183–D196 | 2027-04-01 – 2027-04-14 | End-to-end functional verification, fixes and UAT rehearsal |
-| S15 | D197–D210 | 2027-04-15 – 2027-04-28 | D210/M3 package; SIT, UAT and security/performance evidence |
-| S16 | D211–D224 | 2027-04-29 – 2027-05-12 | Hardening, production readiness, training and cutover rehearsal |
-| S17 | D225–D238 | 2027-05-13 – 2027-05-26 | Go-live support, handover, final UAT/residual fixes |
+| S01 | D1–D14 | 2026-10-01 ถึง 2026-10-14 | กำหนดเป้าหมายผลิตภัณฑ์และโครงสร้างกำกับโครงการ |
+| S02 | D15–D28 | 2026-10-15 ถึง 2026-10-28 | กำหนดข้อจำกัดและข้อตกลงข้อมูลต้นทาง |
+| S03 | D29–D42 | 2026-10-29 ถึง 2026-11-11 | เตรียมส่งมอบงวดแรกและพื้นฐานการออกแบบ |
+| S04 | D43–D56 | 2026-11-12 ถึง 2026-11-25 | ทบทวน SRS, OCR และขั้นตอนคดี |
+| S05 | D57–D70 | 2026-11-26 ถึง 2026-12-09 | ตรวจสอบแบบจำลองข้อมูลและต้นแบบ |
+| S06 | D71–D84 | 2026-12-10 ถึง 2026-12-23 | ทบทวนคำร้องและการตั้งค่าร่วม |
+| S07 | D85–D98 | 2026-12-24 ถึง 2027-01-06 | สาธิตการรับข้อมูลเข้าสู่ระบบคดี |
+| S08 | D99–D112 | 2027-01-07 ถึง 2027-01-20 | ตรวจสอบประวัติคดีและการควบคุมสิทธิ์ |
+| S09 | D113–D126 | 2027-01-21 ถึง 2027-02-03 | ส่งมอบงวดสองและต้นแบบเชื่อมโยง |
+| S10 | D127–D140 | 2027-02-04 ถึง 2027-02-17 | สาธิตกราฟและการคำนวณจัดสรรเบื้องต้น |
+| S11 | D141–D154 | 2027-02-18 ถึง 2027-03-03 | ตรวจความสอดคล้องข้อมูลและรายงาน |
+| S12 | D155–D168 | 2027-03-04 ถึง 2027-03-17 | สาธิตคำร้องถึงขั้นตอนอนุมัติ |
+| S13 | D169–D182 | 2027-03-18 ถึง 2027-03-31 | ตรวจความครบถ้วนของระบบและการทดสอบ |
+| S14 | D183–D196 | 2027-04-01 ถึง 2027-04-14 | ทดสอบกระบวนงานและแก้ไขข้อบกพร่อง |
+| S15 | D197–D210 | 2027-04-15 ถึง 2027-04-28 | เตรียมหลักฐานตรวจรับงวดสาม |
+| S16 | D211–D224 | 2027-04-29 ถึง 2027-05-12 | ตรวจความปลอดภัยและความพร้อมเปิดใช้งาน |
+| S17 | D225–D238 | 2027-05-13 ถึง 2027-05-26 | อบรม เปิดใช้งาน และเตรียมส่งมอบสุดท้าย |
 
-*Illustrative only. Recalculate calendar dates from signed contract start; contractual schedule prevails.*
+## การตรวจรับตาม TOR
+- **M1 วันที่ 30:** แผนโครงการ รายงานเริ่มงาน แผนความเสี่ยง
+- **M2 วันที่ 120:** SRS แบบออกแบบ ต้นแบบ และแผนทดสอบ
+- **M3 วันที่ 210:** ระบบพัฒนาแล้ว ERD/Data Dictionary และผล SIT/UAT/ความปลอดภัย/ประสิทธิภาพ
+- **M4 วันที่ 240:** อบรม คู่มือ เปิดระบบ ส่งมอบซอร์สโค้ดและรายงานฉบับสมบูรณ์
 
-## TOR stage-gates (independent from Sprints)
-| Gate | Due | Evidence group |
-|---|---|---|
-| M1 | D30 (forecast 2026-10-30) | Project Management Plan, Kick-off, Risk Management Plan |
-| M2 | D120 (forecast 2027-01-28) | Requirement/SRS/design/prototype/architecture and test planning |
-| M3 | D210 (forecast 2027-04-28) | Implemented system, ERD/DD, SIT/UAT, security and performance testing |
-| M4 | D240 (forecast 2027-05-28) | Training, manuals, go-live, handover/source code, final report |
+วันที่ 1 ตุลาคม 2569 เป็นวันเริ่มต้น **สมมติ** ตามแผนเดิม D239–D240 เป็นช่วงเตรียมตรวจรับสุดท้ายหลัง S17 ไม่ใช่ Sprint ที่เพิ่มขึ้น
 
-## Sprint planning/review operating checklist
-1. **Before Planning:** PO has ordered, clarified Product Backlog and agrees Product Goal; Developers know capacity, risks, necessary skills and technical debt.
-2. **Planning:** choose Sprint Goal and realistic set of stories; Developers identify subtasks, test strategy, pairings and interfaces.
-3. **Daily Scrum:** inspect Sprint Goal and adjust; blocked dependencies escalate to shared integration sync.
-4. **Continuous integration:** vertical slices test across API/data, case, claim/return and reporting; never defer all system integration until M3.
-5. **Review:** present usable Increment with acceptance observations and update Product Backlog.
-6. **Retrospective:** record one or two improvement actions and verify next Sprint.
-7. **Gate review:** separate PM/PO, QA and business approval process validates TOR delivery artifacts before submission.
-
-## Planning guardrails
-- Intermediate D60 / D90 / D175 / D195 / D205 / D225 points in the existing public roadmap are **internal forecasts** only.
-- Feature complete means planned functionality implemented, not final acceptance.
-- Sprint Review and UAT/contract acceptance are distinct.
-- Reserve capacity each Sprint for quality, security, integration, review and defects. No fabricated team velocities.
+## ขั้นตอนในแต่ละ Sprint
+1. Product Owner จัดลำดับ Product Backlog
+2. Scrum Team กำหนด Sprint Goal และ Developers เลือกงานตามกำลังทีม
+3. Developers ตรวจความก้าวหน้ารายวันและปรับแผน
+4. ทดสอบและเชื่อมระบบอย่างต่อเนื่องตาม DoD
+5. Sprint Review สาธิต Increment และรับข้อเสนอแนะ
+6. Sprint Retrospective กำหนดสิ่งที่จะปรับปรุง
+7. แยกการตรวจรับ TOR ออกจาก Sprint Review
