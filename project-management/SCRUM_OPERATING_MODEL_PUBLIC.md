@@ -1,58 +1,53 @@
-# Scrum Operating Model — AMLO Cybercrime (Public/Sanitized)
+# รูปแบบการบริหารโครงการด้วย Scrum
 
-> **Status:** Proposed working model for Product Owner and Scrum Teams to approve. Repository is PUBLIC. Never publish case/victim/banking records, private legal annexes, real environment configs, access credentials, internal endpoints or vulnerability findings.
+> เอกสารแนวทางเสนอเพื่อให้ Product Owner และทีม Scrum พิจารณาอนุมัติ ไม่ใช่ข้อสรุปว่ามีการแต่งตั้งหรือเริ่ม Sprint แล้ว
 
-## Product Goal
-Deliver a secure, connected platform that enables authorized staff to intake and correlate information, manage cases, support victim/claim journeys and execute controlled, auditable asset-return processes; provide understandable status and management information. Business/legal decisions remain with authorized humans.
+## เป้าหมายผลิตภัณฑ์ (Product Goal)
+พัฒนาระบบที่เชื่อมโยงการรับข้อมูลและเอกสาร การวิเคราะห์ธุรกรรม การจัดการคดี การยื่นคำร้อง และกระบวนการคืนทรัพย์สินอย่างปลอดภัย ตรวจสอบย้อนกลับได้ พร้อมการให้ข้อมูลและรายงานแก่ผู้มีสิทธิ์ โดยการตัดสินใจตามกฎหมายต้องเป็นหน้าที่ของผู้มีอำนาจ
 
-## Product scope and accountabilities
-- **One Product / one accountable Product Owner** for the cross-system Product Backlog: orders items, explains value and accepts business outcomes. Appoint by client/project governance; not assumed named.
-- **Scrum Masters:** establish Scrum effectiveness and remove impediments. One person may coach more than one team, if capacity allows; role to be confirmed.
-- **Developers:** cross-functional accountable professionals who plan, estimate, build, test, integrate and verify a usable Increment every Sprint; include BA/SA/QA/security/DevOps expertise as needed.
-- **Project Manager / Contract Governance (complementary, not substitute for Scrum):** maintain TOR milestones, submission packages, RAID/risks, communications and approval evidence.
-- **Stakeholders:** program sponsor, business owners, legal/compliance, authorized operations, external source coordinators, UAT representatives.
-
-## Proposed cross-functional team boundaries
-| Workstream | Capability ownership | Epic reference |
-|---|---|---|
-| Squad A — Platform & Integration | SSO, configuration, notification, API/document processing | #5–#8 |
-| Squad B — Transaction & Analytics | Transaction/graph | #9 |
-| Squad C — Case Operations | Case management | #10 |
-| Squad D — Claim & Return | Claim, asset distribution | #11–#12 |
-| Squad E — Citizen Service & BI | Chatbot, reports, dashboards | #13–#15 |
-| Shared service enablers | Cloud/DevOps, security, test/release | #16–#18 |
-| Cross-team | UX and Scrum governance | #19–#20 |
-
-These are planning streams, **not** automatically separate Scrum Teams. Confirm staffing and assign real Scrum Teams; minimize handoffs and integrate continuously. Avoid independent “Done” claims for code that does not meet common DoD.
-
-## Scrum accountabilities, events, artifacts, commitments
-| Element | AMLO adoption |
+## บทบาทและความรับผิดชอบ
+| บทบาท | หน้าที่ |
 |---|---|
-| Product Backlog → **Product Goal** | One ordered, emergent backlog, with 11 capabilities plus common controls and TOR evidence. Product Owner accountable; Developers size items. |
-| Sprint Backlog → **Sprint Goal** | Each participating Scrum Team selects Product Backlog Items and its plan at Sprint Planning; forecast in Issues is **not** a commitment. |
-| Increment → **Definition of Done** | Integrated, usable, verifiable capability with evidence; can produce several Increments within one Sprint. |
-| Sprint | Proposed synchronized **14-calendar-day planning windows**, S01–S17, subject to team agreement. |
-| Sprint Planning | Begin each Sprint: why this Sprint is valuable, what can be Done, and how. Start with available capacity, known risk and Sprint Goal. |
-| Daily Scrum | Developers meet 15 minutes each working day; inspect progress toward Sprint Goal and adapt. |
-| Sprint Review | End of Sprint: demonstrate real integrated work to PO and stakeholders, inspect Product Goal progress, adapt Product Backlog. Not a contractual acceptance ceremony. |
-| Sprint Retrospective | End of Sprint: improve quality, effectiveness and collaboration; track actions in team. |
-| Product Backlog refinement | Ongoing PO + Developers activity: split/order/clarify/test dependencies and estimate. |
-| Cross-team Integration/Dependency Sync | Proposed 2–3 sessions weekly when needed; resolves cross-team blockers without replacing Scrum events. |
+| Product Owner | รับผิดชอบเป้าหมายผลิตภัณฑ์ จัดลำดับ Product Backlog และพิจารณาคุณค่าทางธุรกิจ ต้องยืนยันผู้รับผิดชอบจริง |
+| Scrum Master | ส่งเสริมความเข้าใจ Scrum ช่วยแก้ปัญหาอุปสรรคและพัฒนาประสิทธิผลของทีม |
+| Developers | ร่วมกันออกแบบ พัฒนา ทดสอบ เชื่อมระบบ ประเมินขนาดงาน และส่งมอบ Increment ที่ผ่าน Definition of Done |
+| ผู้จัดการโครงการ | ดูแลสัญญา TOR แผนส่งมอบ ความเสี่ยง การสื่อสารและหลักฐานการตรวจรับ โดยไม่แทนที่บทบาท Scrum |
+| ผู้มีส่วนได้ส่วนเสีย | ผู้บริหาร เจ้าของกระบวนงาน ผู้ใช้ ผู้เชี่ยวชาญกฎหมายและความปลอดภัย และผู้ตรวจรับ |
 
-## Issue/board policies
-- **Issue hierarchy:** Epic → User Story / Product Backlog Item → optional tasks/checklists. Defects reference impacted story.
-- **Workflow:** Product Backlog → Ready → In Progress → Code Review → Testing → PO Review → Done. `Blocked` is a flag/reason/owner, not an alternative substitute for stage.
-- **Mandatory on a story:** testable acceptance, Epic, Squad, dependencies, PO priority decision, estimate from Developers, evidence, TOR capability mapping.
-- **WIP:** each Scrum Team sets realistic in-progress and review limits; favor finish-over-start.
-- **Done:** only when shared DoD holds. Contractual deliverable acceptance is separately tracked in Release/Acceptance view.
-- **Security:** use synthetic sample data; confidential implementation evidence and defect specifics only in approved restricted systems.
-- **No velocity-as-performance ranking:** use flow, predictability, outcomes and quality for inspection, never individual productivity scoring.
+## สายงานที่เสนอ
+| สายงาน | ความรับผิดชอบ | Epic |
+|---|---|---|
+| A ระบบพื้นฐานและเชื่อมโยง | SSO, Configuration, Notification, Data Integration/OCR | #5–#8 |
+| B วิเคราะห์ธุรกรรม | Transaction Analysis และ Graph | #9 |
+| C จัดการคดี | Case Management | #10 |
+| D คำร้องและคืนทรัพย์สิน | Claim Request, Asset Return | #11–#12 |
+| E บริการข้อมูลและรายงาน | Chatbot, Reporting, Dashboard | #13–#15 |
+| งานสนับสนุนร่วม | Cloud/DevOps, Security, QA | #16–#18 |
+| งานข้ามสายงาน | UX และ Scrum Governance | #19–#20 |
 
-## Governance overlay: Hybrid Scrum + contractual checkpoints
-- Keep TOR submission D30, D120, D210, D240 (4 contractual packages) separate from Sprint reviews.
-- A checkpoint is not a Sprint boundary by default; readiness is tracked in Release & Acceptance view.
-- Planned intermediate gates D60, D90, D175, D195, D205, D225 are management targets only, not TOR deadlines.
-- Roles, sprint capacity, external access, final start date, acceptance reviewers and security approvals are **TBD** and must be formally confirmed.
+**หมายเหตุ:** สายงานเหล่านี้เป็นการแบ่งความรับผิดชอบเบื้องต้น ไม่ได้หมายความว่าต้องมี Scrum Team แยกกันเจ็ดทีม การจัดทีมจริงต้องพิจารณาความพร้อมของบุคลากรและลดงานส่งต่อระหว่างทีม
 
-## Sources
-Derived from public/sanitized repository summaries: [TOR summary](../docs/TOR_SUMMARY_PUBLIC.md), [Project Master Plan](./PROJECT_MASTER_PLAN_PUBLIC.md), [Roadmap](../roadmap/ROADMAP.md). Scrum adaptation is a proposed management design; the TOR does not itself specify Scrum roles, team counts, Story Points or Sprint schedule.
+## องค์ประกอบ Scrum
+| องค์ประกอบ | การนำมาใช้ |
+|---|---|
+| Product Backlog / Product Goal | รายการงานรวมของผลิตภัณฑ์เดียว โดย Product Owner รับผิดชอบการจัดลำดับ |
+| Sprint Backlog / Sprint Goal | ทีมเลือกงานและกำหนดเป้าหมายร่วมกันระหว่าง Sprint Planning |
+| Increment / Definition of Done | ผลงานที่รวมเข้ากับระบบและผ่านเกณฑ์คุณภาพร่วม |
+| Sprint | เสนอรอบละ 14 วันปฏิทิน รวม 17 รอบตามแผนเบื้องต้น |
+| Sprint Planning | กำหนดเหตุผลของ Sprint งานที่ทำได้ และวิธีดำเนินการตามกำลังทีม |
+| Daily Scrum | Developers ประชุมวันทำงานละ 15 นาทีเพื่อตรวจความก้าวหน้าต่อ Sprint Goal |
+| Sprint Review | สาธิตผลงานจริง รับข้อเสนอแนะ และปรับ Product Backlog |
+| Sprint Retrospective | ทบทวนและปรับปรุงวิธีทำงาน |
+| Backlog Refinement | ชี้แจง แบ่งงาน ประเมินขนาด และปรับลำดับอย่างต่อเนื่อง |
+
+## สถานะงานที่เสนอ
+**Product Backlog → Ready → In Progress → Code Review → Testing → PO Review → Done**
+
+ใช้สถานะ **Blocked** เป็นตัวบ่งชี้ปัญหาแยกต่างหาก พร้อมผู้รับผิดชอบและการดำเนินการแก้ไข
+
+## การกำกับ TOR ควบคู่กับ Scrum
+- จุดส่งมอบวันที่ 30, 120, 210, 240 เป็นการตรวจรับตามสัญญา แยกจาก Sprint Review
+- จุดติดตามภายในวันที่ 60, 90, 175, 195, 205 และ 225 เป็นเป้าหมายบริหาร ไม่ใช่วันตรวจรับใหม่
+- ห้ามนับ Story Points เป็นหลักฐานตรวจรับ
+- ห้ามเผยแพร่ข้อมูลคดีจริงหรือหลักฐานความปลอดภัยที่จำกัดการเข้าถึง
+- วันเริ่มสัญญา Product Owner กำลังคนและผู้อนุมัติยังต้องยืนยัน
