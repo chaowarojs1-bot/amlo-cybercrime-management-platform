@@ -1,0 +1,66 @@
+name: "Scrum User Story (Public)"
+description: "Create a Product Backlog Item with testable acceptance (no sensitive data)"
+title: "[STORY][Squad][KEY] "
+body:
+  - type: markdown
+    attributes:
+      value: "PUBLIC repository: do not include case/victim/bank details, internal endpoints, credentials, restricted annexes, infrastructure configurations, security findings, or real evidence. Use synthetic examples."
+  - type: dropdown
+    id: workstream
+    attributes:
+      label: Workstream / Squad
+      options:
+        - "A — Platform and Integration"
+        - "B — Transaction and Analytics"
+        - "C — Case Management"
+        - "D — Claim and Refund"
+        - "E — Citizen Service and BI"
+        - "Shared — Cloud, Security, QA"
+        - "Cross-team — UX and Governance"
+    validations:
+      required: true
+  - type: input
+    id: epic
+    attributes:
+      label: Parent Epic Issue
+      placeholder: "#8"
+    validations:
+      required: true
+  - type: textarea
+    id: story
+    attributes:
+      label: User story / Value
+      description: "Who needs what, and what outcome is expected?"
+      placeholder: "As an authorized user, I want ... so that ..."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] Given ... when ... then ..."
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and uncertainties
+      description: "Use issue references and safe summary only."
+      placeholder: "Depends on #...; external approval TBD"
+  - type: input
+    id: sprint
+    attributes:
+      label: Forecast Sprint (not commitment)
+      placeholder: "Sxx / Not planned"
+  - type: input
+    id: tor
+    attributes:
+      label: TOR capability and safe RTM reference
+      placeholder: "Case Management; controlled RTM ID TBD"
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Public safety check
+      options:
+        - label: "No restricted material or actual sensitive data is included."
+          required: true
