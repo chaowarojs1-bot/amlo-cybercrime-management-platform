@@ -1,36 +1,32 @@
-# Cross-Team Dependency & Risk Register — Public/Sanitized
+# ทะเบียนความสัมพันธ์ระหว่างงานและความเสี่ยง
 
-This is an illustrative dependency map for Scrum coordination. It does **not** assert external agreements, live access, actual blockers or confidential risks.
+รายการต่อไปนี้เป็นการพึ่งพาตามแผน ไม่ได้หมายความว่ามีเหตุขัดข้องเกิดขึ้นจริง
 
-## Dependency register
-| ID | Upstream | Downstream | Condition for handoff | Coordinator | Target |
-|---|---|---|---|---|---|
-| DEP-01 | EP-13 Security + EP-12 Cloud | EP-01/04/06 | Approved security and development baseline | Shared lead | Before integrated tests |
-| DEP-02 | INT-03/04 data contract/intake | CASE-02, TXN-01 | Validated, versioned synthetic payload and error contract | A+B+C leads | Early integration |
-| DEP-03 | IAM-02/03 identity | CASE, CLM, BOT, reports | User/role access contract and negative tests | A + dependent teams | Before user-specific UAT |
-| DEP-04 | CASE-01/03 statuses | NOT-01/03, CLM-04 | Event, state machine and audit definitions | C+D+A | Before notification SIT |
-| DEP-05 | CASE/CLM data | REF-01/02 | Rules and data semantics approved by business | C+D + PO | Prior to allocation verification |
-| DEP-06 | REF approvals/results | RPT-03, DASH-03 | Authorized outcome/reconciliation definitions | D+E | Before dashboard/reports UAT |
-| DEP-07 | CLM identity/status service | BOT-03 | Authenticated lookup contract and controlled error behavior | D+E | Before bot acceptance |
-| DEP-08 | UX prototyping | CASE/CLM/REF implementations | Reviewed and accessible journey patterns | UX+teams | Before build refinement |
-| DEP-09 | OPS CI/CD | QA tests and all services | Repeatable build/test, evidence capture | Shared leads | Continuously |
-| DEP-10 | SIT/UAT and security | Go-live/handover | Exit criteria and residual risk authorization | QA/PO/PM | M3→M4 |
+| รหัส | งานต้นทาง | งานปลายทาง | เงื่อนไขที่ต้องพร้อม |
+|---|---|---|---|
+| DEP-01 | ความปลอดภัยและ Cloud | การเข้าสู่ระบบ เชื่อมโยงข้อมูล จัดการคดี | แนวทางพัฒนาและควบคุมสิทธิ์ได้รับการทบทวน |
+| DEP-02 | ข้อตกลงข้อมูลและรับเข้า | คดีและวิเคราะห์ธุรกรรม | มีโครงสร้างข้อมูลตัวอย่างที่ตรวจสอบได้ |
+| DEP-03 | การเข้าสู่ระบบและสิทธิ์ | คดี คำร้อง Chatbot รายงาน | ผ่านการทดสอบสิทธิ์ |
+| DEP-04 | สถานะคดี | แจ้งเตือนและคำร้อง | นิยามเหตุการณ์และสถานะตรงกัน |
+| DEP-05 | ข้อมูลคดีและคำร้อง | การคืนทรัพย์สิน | กฎธุรกิจและความหมายข้อมูลได้รับอนุมัติ |
+| DEP-06 | ผลการคืนทรัพย์สิน | รายงานและ Dashboard | มีนิยามผลลัพธ์และยอดที่ตรวจสอบได้ |
+| DEP-07 | ข้อมูลสถานะคำร้อง | Chatbot | มีบริการตรวจสถานะตามสิทธิ์ |
+| DEP-08 | UX | คดี คำร้อง และคืนทรัพย์สิน | ต้นแบบผ่านการทบทวน |
+| DEP-09 | DevOps | การทดสอบทุกระบบ | มีขั้นตอน Build/Test ที่ทำซ้ำได้ |
+| DEP-10 | SIT/UAT และความปลอดภัย | เปิดใช้งานจริง | ผ่านเกณฑ์ความพร้อมและการยอมรับที่เกี่ยวข้อง |
 
-## Generic RAID categories for weekly inspection
-- External source interface/access readiness (do not state real partner details on public Issues).
-- Requirements/business rule decisions, especially allocation/approval semantics.
-- Cross-team data contracts and version compatibility.
-- Specialist capacity and staffing uncertainty.
-- Accumulating quality, security and performance test debt.
-- Contract deliverable evidence completeness.
-- Production readiness and support continuity.
+## ประเด็นเสี่ยงที่ต้องติดตาม
+- ความพร้อมของหน่วยงานต้นทางและการเชื่อมต่อข้อมูล
+- ความชัดเจนของกฎธุรกิจและกฎจัดสรรทรัพย์สิน
+- ความเข้ากันได้ของโครงสร้างข้อมูลระหว่างทีม
+- ความพร้อมของบุคลากรและทักษะเฉพาะทาง
+- งานทดสอบและความปลอดภัยที่สะสม
+- ความครบถ้วนของหลักฐานตาม TOR
+- ความพร้อมก่อนเปิดระบบจริง
 
-## Blocker protocol
-1. Flag impacted issue `Blocked` in GitHub Project with plain, non-sensitive reason.
-2. Record owner, when blocked, impact on Sprint Goal, next action and check-back date.
-3. Coordinate cross-team issue at dependency sync; escalate only if local resolution fails.
-4. At each Sprint Review/weekly PM checkpoint, revise forecasts and risks transparently.
-5. Sensitive details remain in approved restricted tracker, referenced only by sanitized tracking ID.
-
-## Public status
-All dependencies are **planned/potential** and not marked currently blocked without confirmation. No resource assignment or external service availability is assumed.
+## วิธีจัดการ Blocker
+1. ระบุสถานะ Blocked พร้อมคำอธิบายที่ไม่เป็นความลับ
+2. บันทึกผู้รับผิดชอบ ผลกระทบ และกำหนดติดตาม
+3. หารือในที่ประชุมประสานงานข้ามทีม
+4. ปรับแผนใน Sprint Review และการประชุมสถานะ
+5. เก็บรายละเอียดที่จำกัดสิทธิ์ในระบบภายใน
