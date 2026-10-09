@@ -1,44 +1,34 @@
-# Definition of Ready / Definition of Done / Acceptance
+# เกณฑ์ความพร้อมของงานและเกณฑ์งานเสร็จสมบูรณ์
 
-## Definition of Ready (DoR): optional refinement aid, not a Scrum Guide commitment
-A Product Backlog Item is generally suitable for Sprint Planning when:
-- User/actor, value/outcome and boundaries are understandable.
-- Epic and high-level TOR functional mapping exist.
-- At least 2–3 verifiable acceptance conditions are written.
-- External inputs, dependencies and compliance questions are identified.
-- Development/test evidence route is possible using safe data.
-- Developers can assess its size and split as necessary.
-- Product Owner has ordered it with the Product Goal in mind.
+## Definition of Ready (DoR) — แนวทางช่วยเตรียมงาน
+- [ ] ระบุผู้ใช้ ความต้องการ และคุณค่าของงานได้ชัดเจน
+- [ ] เชื่อมโยง Epic และหมวดความต้องการตาม TOR ได้
+- [ ] มี Acceptance Criteria ที่ทดสอบได้
+- [ ] ระบุข้อมูลนำเข้า ข้อจำกัด และงานที่ต้องพึ่งพา
+- [ ] มีแนวทางทดสอบโดยใช้ข้อมูลจำลอง
+- [ ] Developers สามารถประเมินขนาดงานหรือแบ่งงานให้เหมาะกับ Sprint
+- [ ] Product Owner จัดลำดับความสำคัญแล้ว
 
-**DoR must not become a bureaucratic gate** preventing teams from delivering valuable work or clarifying details inside the Sprint.
+DoR เป็นเครื่องมือช่วย Refinement ไม่ใช่เงื่อนไขบังคับตาม Scrum Guide ที่ห้ามทีมปรับรายละเอียดภายใน Sprint
 
-## Shared Definition of Done (DoD): mandatory quality standard
-For an applicable working product Increment:
-- [ ] Meets approved acceptance criteria and intended business process.
-- [ ] Peer-reviewed changes incorporated; documented technical changes appropriate.
-- [ ] Automated tests and relevant integration/regression checks pass.
-- [ ] Role authorization, access denial, privacy handling and logging meet agreed controls.
-- [ ] API/data schema compatibility and provenance/reconciliation are verified where applicable.
-- [ ] Error handling, usability/accessibility and nonfunctional expectations are checked.
-- [ ] No unresolved critical blocker or prohibited data disclosure exists for this item.
-- [ ] Evidence and source/revision links are accessible to authorized reviewers.
-- [ ] Product Owner can inspect demonstrable usable work at Sprint Review.
-- [ ] Integrated with other Increment components and deployable in the agreed environment.
+## Definition of Done (DoD) — เกณฑ์ร่วมก่อนถือว่างานเสร็จ
+- [ ] ผลงานเป็นไปตาม Acceptance Criteria
+- [ ] มีการตรวจทานโค้ดหรือเอกสารตามลักษณะงาน
+- [ ] ผ่านการทดสอบอัตโนมัติและการทดสอบเชื่อมโยงที่เกี่ยวข้อง
+- [ ] ตรวจสิทธิ์เข้าถึง ความเป็นส่วนตัว และบันทึกการใช้งาน
+- [ ] ตรวจสอบความเข้ากันได้ของ API ข้อมูล และการอ้างอิงแหล่งที่มา
+- [ ] ทดสอบข้อผิดพลาด การใช้งาน และคุณภาพที่ไม่ใช่หน้าที่หลักตามความเหมาะสม
+- [ ] ไม่มีปัญหาวิกฤตที่ยังค้างและขัดต่อเกณฑ์งาน
+- [ ] มีหลักฐานตรวจสอบและอ้างอิงรุ่นผลงาน
+- [ ] สามารถแสดงผลงานให้ Product Owner ตรวจสอบได้
+- [ ] ผลงานเชื่อมรวมกับ Increment และพร้อมนำไปใช้งานตามสภาพแวดล้อมที่ตกลง
 
-A documentation or planning item has a tailored verifiable output (peer-approved artifact) rather than pretending to be deployed code. The **common quality bar is not optional**.
+งานเอกสารและงานวางแผนต้องมีผลลัพธ์ที่ตรวจสอบได้ ไม่จำเป็นต้องแสร้งว่าเป็นโค้ดที่ Deploy แล้ว
 
-## Acceptance separation
-- **Story acceptance:** PO or delegate inspects the item and checks acceptance criteria.
-- **Increment Done:** Developers confirm shared DoD. Items that do not meet DoD are not Done.
-- **SIT/UAT:** separate structured verification and business acceptance evidence.
-- **Contract/TOR gate:** formal package reviewed per contract; never automatically implied by closing GitHub Issues.
+## การตรวจรับแต่ละระดับ
+1. **Story Acceptance:** ตรวจตาม Acceptance Criteria
+2. **Increment Done:** ผ่าน DoD ของทีม
+3. **SIT/UAT:** มีหลักฐานการทดสอบระบบและการยอมรับจากผู้ใช้งาน
+4. **TOR Acceptance:** ตรวจรับตามสัญญาโดยผู้มีอำนาจ
 
-## Minimum issue evidence (PUBLIC view)
-- PBI / Epic reference; Product Goal connection
-- Acceptance checklist, reviewer, result status
-- Link to PR/build/test summary that is approved for public sharing (otherwise safe reference only)
-- Known follow-ups, verified dependencies, disposition of defects
-- No real cases, claimant identities, bank statements, credentials, vulnerability descriptions or private system configurations.
-
-## Working principle
-Never use Story Points or ticket completion alone as evidence of contract acceptance; require delivered usable capability, verification and documented sign-off.
+การปิด GitHub Issue ไม่ได้แสดงว่าได้รับการตรวจรับตาม TOR แล้ว
