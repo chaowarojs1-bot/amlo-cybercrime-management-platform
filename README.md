@@ -1,44 +1,43 @@
-# AMLO Cybercrime Management Platform
+# โครงการระบบบริหารจัดการอาชญากรรมทางเทคโนโลยี ปปง.
 
-Public / sanitized planning repository for the **AMLO Cybercrime Management Platform**.
+คลังเอกสารแผนงานฉบับเปิดเผยได้ของโครงการ AMLO Cybercrime Management Platform
 
-> **PUBLIC DISCLOSURE:** This repository is visible publicly. Do not upload or paste real cases, victims, banking data, private agreements, internal endpoints/architectures, credentials, logs or security findings. See [PUBLIC_DISCLOSURE.md](./PUBLIC_DISCLOSURE.md).
+> **ข้อควรระวัง:** คลังนี้เป็นสาธารณะ ห้ามเผยแพร่ข้อมูลผู้เสียหาย ข้อมูลคดี บัญชีธนาคาร หลักฐานจริง รหัสผ่าน ระบบเครือข่ายภายใน หรือผลการตรวจสอบช่องโหว่
 
-## Project planning context
-- TOR-based delivery window: **240 calendar days**, checkpoints D30, D120, D210, D240.
-- **1 Oct 2026 is an illustrative working baseline only**, not a confirmed contract commencement date.
-- Management model: **Scrum delivery + contractual stage-gate governance**.
-- Business approval, Product Owner, personnel assignment, sprint commitment, Story Points and final calendar baseline are pending validation.
+## กรอบการดำเนินงาน
+- ระยะเวลาตามแผน TOR: **240 วันปฏิทิน**
+- จุดส่งมอบตามสัญญา: วันที่ 30, 120, 210 และ 240
+- วันที่ 1 ตุลาคม 2569 เป็น **วันเริ่มต้นสมมติสำหรับวางแผน** ยังไม่ใช่วันที่เริ่มสัญญาที่ได้รับการยืนยัน
+- ใช้ **Scrum สำหรับการพัฒนา** ควบคู่กับการควบคุมการส่งมอบตาม TOR
+- การกำหนด Product Owner, บุคลากร, Story Points และ Sprint Goal ต้องผ่านการยืนยันของผู้รับผิดชอบ
 
-## Start here — Scrum Framework
-1. [Program Master Board — static launch view](./project-management/PROGRAM_MASTER_BOARD_PUBLIC.md)
-2. [17 Sprint issue register](./project-management/SPRINT_ISSUE_REGISTER_PUBLIC.md)
-3. [Scrum operating model and accountabilities](./project-management/SCRUM_OPERATING_MODEL_PUBLIC.md)
-4. [Product Backlog register — 16 Epics / 11 TOR functional areas + cross-cutting work](./project-management/PRODUCT_BACKLOG_REGISTER_PUBLIC.md)
-5. [17 Sprint proposed roadmap](./project-management/SPRINT_ROADMAP_PUBLIC.md)
-6. [Definition of Ready / Definition of Done](./project-management/DEFINITION_OF_READY_DONE_PUBLIC.md)
-7. [Cross-team dependencies and RAID](./project-management/DEPENDENCY_RISK_REGISTER_PUBLIC.md)
-8. [TOR release/acceptance gates](./project-management/RELEASE_ACCEPTANCE_PUBLIC.md)
-9. [Scrum meetings and quality metrics](./project-management/SCRUM_CEREMONIES_METRICS_PUBLIC.md)
-10. [TOR traceability capability index](./project-management/TOR_TRACEABILITY_PUBLIC.md)
-11. [GitHub Projects v2 board setup blueprint](./project-management/GITHUB_PROJECT_BOARD_SETUP_PUBLIC.md)
+## ศูนย์รวมเอกสาร Scrum
+1. [กระดานภาพรวมโครงการ](./project-management/PROGRAM_MASTER_BOARD_PUBLIC.md)
+2. [ทะเบียน Sprint ทั้ง 17 รอบ](./project-management/SPRINT_ISSUE_REGISTER_PUBLIC.md)
+3. [รูปแบบการทำงาน Scrum และบทบาททีม](./project-management/SCRUM_OPERATING_MODEL_PUBLIC.md)
+4. [ทะเบียน Product Backlog](./project-management/PRODUCT_BACKLOG_REGISTER_PUBLIC.md)
+5. [แผน Sprint Roadmap](./project-management/SPRINT_ROADMAP_PUBLIC.md)
+6. [นิยามความพร้อมและความสำเร็จของงาน](./project-management/DEFINITION_OF_READY_DONE_PUBLIC.md)
+7. [ความสัมพันธ์ระหว่างงานและความเสี่ยง](./project-management/DEPENDENCY_RISK_REGISTER_PUBLIC.md)
+8. [การตรวจรับงานตาม TOR](./project-management/RELEASE_ACCEPTANCE_PUBLIC.md)
+9. [การประชุม Scrum และตัวชี้วัด](./project-management/SCRUM_CEREMONIES_METRICS_PUBLIC.md)
+10. [การเชื่อมโยง TOR กับ Backlog](./project-management/TOR_TRACEABILITY_PUBLIC.md)
+11. [แนวทางตั้งค่า GitHub Projects](./project-management/GITHUB_PROJECT_BOARD_SETUP_PUBLIC.md)
 
-## Live planning work in GitHub Issues
-- [All open planning issues](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues?q=is%3Aissue+is%3Aopen)
-- [Epic issues](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+EP-)
-- TOR gate tracker issues: [D30 #99](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/99), [D120 #100](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/100), [D210 #101](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/101), [D240 #102](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/102)
-- Original baseline issues: [discovery #1](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/1), [SRS #2](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/2), [architecture #3](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/3), [PM plan #4](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/4)
-- Issue forms: `User Story`, `Epic`, `Sanitized Bug`; Pull Requests have a standard review template.
+## รายการงานที่สร้างแล้ว
+- Epic 16 รายการ ครอบคลุม 11 ระบบตาม TOR และงานสนับสนุน
+- User Story 75 รายการ พร้อมเกณฑ์ยอมรับเบื้องต้น
+- Sprint Tracker 17 รายการ (เป็นแผน ไม่ใช่ Sprint ที่เริ่มดำเนินการแล้ว)
+- จุดตรวจรับ TOR 4 รายการ: [วันที่ 30](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/99), [วันที่ 120](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/100), [วันที่ 210](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/101), [วันที่ 240](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/102)
+- [เปิดรายการงาน GitHub Issues](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues)
 
-### Native GitHub Projects status
-**GitHub Issues, documents and templates are populated.** The actual Projects v2 Program Master Board (custom fields, iterations and saved views) **is not yet provisioned** through this connection. An authorized GitHub Projects administrator can configure it using the [board blueprint](./project-management/GITHUB_PROJECT_BOARD_SETUP_PUBLIC.md). This is an explicit remaining setup step rather than a claim of an existing Project Board.
+## สถานะกระดาน GitHub Projects
+**สร้าง Issues และเอกสารแล้ว แต่ยังไม่ได้สร้างกระดาน GitHub Projects v2 ที่มีฟิลด์และระบบอัตโนมัติจริง** ให้ผู้ดูแลตั้งค่าตามคู่มือที่แนบ
 
-## Existing public project artefacts
-- [Project Master Plan](./project-management/PROJECT_MASTER_PLAN_PUBLIC.md)
-- [Roadmap](./roadmap/ROADMAP.md)
-- [Public TOR summary](./docs/TOR_SUMMARY_PUBLIC.md)
-- [Public architecture overview](./architecture-public/ARCHITECTURE_OVERVIEW.md)
-- [Publication checklist](./docs/TEMPORARY_PUBLICATION_CHECKLIST.md)
+## เอกสารเดิม
+- [แผนบริหารโครงการ](./project-management/PROJECT_MASTER_PLAN_PUBLIC.md)
+- [แผนดำเนินงาน](./roadmap/ROADMAP.md)
+- [สรุป TOR](./docs/TOR_SUMMARY_PUBLIC.md)
+- [ภาพรวมสถาปัตยกรรม](./architecture-public/ARCHITECTURE_OVERVIEW.md)
 
-## Delivery policy
-A GitHub Issue marked Done is **not automatically** a delivered contract package. Sprint Review, integrated Increment DoD, formal SIT/UAT and TOR contractual acceptance are tracked separately.
+**หลักการสำคัญ:** การปิด Issue ไม่เท่ากับการตรวจรับตามสัญญา การทดสอบ SIT/UAT และการลงนามตรวจรับยังต้องดำเนินการตามขั้นตอนอย่างเป็นทางการ
