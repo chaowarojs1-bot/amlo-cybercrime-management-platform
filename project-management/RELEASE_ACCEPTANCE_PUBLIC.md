@@ -1,50 +1,39 @@
-# Release & TOR Acceptance Governance — Public/Sanitized
+# แผนตรวจรับและส่งมอบงานตาม TOR
 
-This is a proposed evidence-management plan. Formal contract, TOR originals and authorized decisions remain controlling. Sprint Reviews do not themselves constitute TOR contractual acceptance.
+การตรวจรับตาม TOR เป็นคนละกระบวนการกับ Sprint Review และต้องใช้เอกสารและอำนาจอนุมัติตามสัญญา
 
-## Four mandatory contractual delivery checkpoints
-| Gate | Due (day from contract) | Public evidence summary | Working readiness checks | Acceptance / outcome |
-|---|---|---|---|---|
-| M1 | D30 | Project Management Plan, Kick-off Report, Risk Management Plan | Organization, roles, governance, risk baseline, workshop plan | Formal submission and client review |
-| M2 | D120 | Preliminary, SRS, validation, functional/software design, prototype, UX/UI, test planning/artifacts, architecture | Signed-off requirements/design baseline; validated prototype and traceability | Formal submission and client review |
-| M3 | D210 | Developed system, ERD, Data Dictionary, SIT/UAT, Security Test, Performance Test | Integrated release, test summaries, remediation/evidence, acceptance review | Formal submission and client review |
-| M4 | D240 | Training, manuals, go-live/cloud deployment, source handover, documents, Final Report | Cutover/runbook, support, knowledge transfer, evidence index, formal closeout | Formal submission and client review |
+| งวด | กำหนด | เอกสาร/ผลงานหลัก | สัดส่วนตามสรุป TOR |
+|---|---|---|---|
+| M1 | วันที่ 30 | แผนบริหารโครงการ รายงานประชุมเริ่มงาน แผนบริหารความเสี่ยง | 10% |
+| M2 | วันที่ 120 | รายงานเบื้องต้น SRS การยืนยันความต้องการ การออกแบบระบบ สถาปัตยกรรม UX/UI ต้นแบบ และแผนทดสอบ | 30% |
+| M3 | วันที่ 210 | ระบบที่พัฒนา ERD พจนานุกรมข้อมูล SIT/UAT การทดสอบความปลอดภัยและประสิทธิภาพ | 40% |
+| M4 | วันที่ 240 | การอบรม คู่มือ เปิดใช้งานระบบ หลักฐานติดตั้งบน Cloud ส่งมอบซอร์สโค้ดและเอกสาร รายงานฉบับสมบูรณ์ | 20% |
 
-The publicly documented payment shares are 10% / 30% / 40% / 20%; those do not establish actual payment status.
+## งวด M1
+- [ ] แผนบริหารโครงการและการสื่อสาร
+- [ ] รายงานเริ่มงานและมติที่เกี่ยวข้อง
+- [ ] แผนความเสี่ยง การเปลี่ยนแปลง และการควบคุมเอกสาร
+- [ ] ตรวจความครบถ้วนก่อนเสนอผู้มีอำนาจ
 
-## Evidence checklist by phase
-### M1 — Plan and governance
-- [ ] PM plan, stakeholder and role governance, schedule baseline and change control.
-- [ ] Kick-off agenda/minutes, communications and escalation plan.
-- [ ] Initial risk plan and secure document control.
-### M2 — Requirement and design package
-- [ ] Requirement validation workshop evidence and approved SRS.
-- [ ] Functional, UX, architecture, data/interface and security design views.
-- [ ] Prototype demonstration, usability notes and relevant test approach.
-- [ ] TOR-to-requirement-to-story cross-reference (detailed matrix stored privately).
-### M3 — Build and verification
-- [ ] Build/version inventory and deployment evidence (restricted where sensitive).
-- [ ] ERD/Data Dictionary and reconciled interfaces.
-- [ ] SIT/UAT evidence, results/defects, performance test and security-test acceptance **without publishing findings**.
-- [ ] PO/business review and outstanding exception/risk disposition.
-### M4 — Production and transfer
-- [ ] Production readiness and approved cutover/rollback results.
-- [ ] User/admin training records and manuals.
-- [ ] Source code/configuration transfer and operational handover under controlled channels.
-- [ ] Closeout report, open-item transfer and client delivery record.
+## งวด M2
+- [ ] ยืนยันความต้องการและจัดทำ SRS
+- [ ] เชื่อมโยงความต้องการ 11 ระบบกับแบบออกแบบ
+- [ ] ทบทวนต้นแบบ UX/UI และข้อเสนอแนะผู้ใช้
+- [ ] ทบทวนสถาปัตยกรรม ข้อมูล API และแผนทดสอบ
+- [ ] เตรียมหลักฐานตรวจรับในพื้นที่ควบคุม
 
-## Explicit distinction
-1. GitHub Issue `Done` = shared Scrum Definition of Done satisfied.
-2. Integrated Increment demonstrated = Sprint Review visibility.
-3. SIT/UAT accepted = verification and business acceptance recorded.
-4. TOR milestone accepted = authorized contractual review/signature per contract.
+## งวด M3
+- [ ] ทดสอบกระบวนงานเชื่อมโยงตั้งแต่ต้นจนจบ
+- [ ] ตรวจสอบ ERD, Data Dictionary และความถูกต้องข้อมูล
+- [ ] รวบรวมผล SIT/UAT และการแก้ไขข้อบกพร่อง
+- [ ] ยืนยันผลการทดสอบความปลอดภัยและประสิทธิภาพในระบบที่จำกัดสิทธิ์
+- [ ] รับรองความพร้อมจากฝ่ายธุรกิจและเทคนิค
 
-## Cross-cutting exit rules
-- No work is accepted purely because a card changed to Done.
-- Critical security issues are managed only in private authorized trackers.
-- Decisions about legal entitlement or asset allocation stay with authorized human reviewers.
-- Public issues/README store safe summary and reference IDs, not confidential approval documents.
-- Contract start and exact dates are tentative until formal baseline confirmed.
+## งวด M4
+- [ ] ทดสอบความพร้อมก่อนขึ้นระบบจริงและแผนย้อนกลับ
+- [ ] จัดอบรมและส่งมอบคู่มือ
+- [ ] ส่งมอบซอร์สโค้ด การตั้งค่าและเอกสารผ่านช่องทางที่ได้รับอนุญาต
+- [ ] ระบุผู้ดูแลระบบและแผนสนับสนุนหลังเปิดใช้
+- [ ] ตรวจรายงานฉบับสมบูรณ์และการส่งมอบตามสัญญา
 
-## Links
-See [public TOR summary](../docs/TOR_SUMMARY_PUBLIC.md), [Product Backlog](./PRODUCT_BACKLOG_REGISTER_PUBLIC.md), and [Sprint Roadmap](./SPRINT_ROADMAP_PUBLIC.md).
+**ข้อจำกัด:** ไม่แสดงสถานะการอนุมัติ การจ่ายเงิน หรือการตรวจรับว่าเสร็จแล้วโดยไม่มีหลักฐานจริง
