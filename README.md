@@ -24,8 +24,8 @@ Public / sanitized planning repository for the **AMLO Cybercrime Management Plat
 ## Live planning work in GitHub Issues
 - [All open planning issues](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues?q=is%3Aissue+is%3Aopen)
 - [Epic issues](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+EP-)
-- TOR gate tracker issues: [D30 #99](./issues/99), [D120 #100](./issues/100), [D210 #101](./issues/101), [D240 #102](./issues/102)
-- Original baseline issues: [discovery #1](./issues/1), [SRS #2](./issues/2), [architecture #3](./issues/3), [PM plan #4](./issues/4)
+- TOR gate tracker issues: [D30 #99](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/99), [D120 #100](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/100), [D210 #101](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/101), [D240 #102](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/102)
+- Original baseline issues: [discovery #1](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/1), [SRS #2](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/2), [architecture #3](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/3), [PM plan #4](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/4)
 - Issue forms: `User Story`, `Epic`, `Sanitized Bug`; Pull Requests have a standard review template.
 
 ### Native GitHub Projects status
