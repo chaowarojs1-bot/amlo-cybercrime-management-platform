@@ -1,38 +1,32 @@
-# Scrum Events, Inspection & Reporting (proposed)
+# การประชุม Scrum และตัวชี้วัดโครงการ
 
-## Regular operating rhythm
-| Event | Cadence | Expected output | Facilitator/accountability |
-|---|---|---|---|
-| Product Backlog Refinement | Ongoing, typically 1–2 sessions per week | Ordered/refined PBIs, split stories, dependency visibility, estimates by Developers | PO + Developers; Scrum Master facilitates as useful |
-| Sprint Planning | Start each 2-week Sprint | Sprint Goal, selected Stories and plan | Entire Scrum Team |
-| Daily Scrum | Every working day, 15 min | Updated plan toward Sprint Goal | Developers |
-| Cross-Squad Integration Sync | 2–3x/week if needed | Unblocked interfaces, clarified owners, updated forecasts | Cross-team leads; Scrum Master facilitates |
-| Sprint Review | End of Sprint | Inspected usable Increment, stakeholder feedback, adapted Product Backlog | Scrum Team + relevant stakeholders |
-| Sprint Retrospective | End of Sprint | Specific improvement experiments and owners | Scrum Team |
-| Weekly PM / RAID | Weekly | Contract progress, decision log, risk and dependency escalation | PM (not a substitute for Scrum events) |
-| Steering checkpoint | Monthly / each TOR gate as appropriate | Decisions, revised forecasts, governance actions | Sponsor + PM + PO |
+| กิจกรรม | ความถี่เสนอ | ผลลัพธ์ |
+|---|---|---|
+| Backlog Refinement | ต่อเนื่อง โดยอาจจัดสัปดาห์ละ 1–2 ครั้ง | งานชัดเจน แบ่งงานได้ ประเมินโดย Developers |
+| Sprint Planning | ต้น Sprint | Sprint Goal, Sprint Backlog และแผนทำงาน |
+| Daily Scrum | ทุกวันทำงาน ไม่เกิน 15 นาที | ตรวจความก้าวหน้าต่อ Sprint Goal |
+| ประสานงานข้ามสายงาน | สัปดาห์ละ 2–3 ครั้งตามความจำเป็น | แก้ปัญหาการเชื่อมต่อและการพึ่งพา |
+| Sprint Review | สิ้น Sprint | สาธิต Increment และปรับ Backlog |
+| Sprint Retrospective | สิ้น Sprint | แผนปรับปรุงการทำงาน |
+| ประชุมความเสี่ยง/สถานะโครงการ | รายสัปดาห์ | ติดตาม TOR ความเสี่ยง ปัญหา และการตัดสินใจ |
+| ประชุมผู้บริหาร | รายเดือนหรือตามจุดตรวจรับ | ตัดสินใจประเด็นสำคัญและปรับแผน |
 
-Timeboxes must remain proportionate to a 2-week Sprint and actual team availability. Sprint Planning starts from the team capacity rather than assumed velocity.
+## ตัวอย่างสถานการณ์สาธิต
+- เอกสาร → OCR → ตรวจสอบข้อมูล → สร้างข้อมูลคดี
+- ธุรกรรม → กราฟความสัมพันธ์ → ตรวจสอบแหล่งข้อมูล
+- คำร้อง → ตรวจสอบตัวตน → พิจารณาเอกสาร → แจ้งสถานะ
+- กฎจัดสรรที่อนุมัติ → คำนวณเบื้องต้น → เจ้าหน้าที่ตรวจทาน → รายงานผล
+- รายงานและ Dashboard ตามสิทธิ์
 
-## Review/demo scenarios
-- Source file → normalized validated record → authorized case record.
-- Transaction record → permissioned graph → analyst source trace.
-- Claim → identity check → evidence review → status and notifications.
-- Approved ruleset → calculation preview → human review → controlled result reporting.
-- Authorized report/dashboard/chatbot queries over authoritative data.
+ใช้ข้อมูลจำลองเท่านั้น
 
-All demos use representative, non-sensitive fabricated data.
+## ตัวชี้วัดเพื่อปรับปรุงการทำงาน
+- ความสำเร็จของ Sprint Goal
+- จำนวนงานเริ่ม/เสร็จ ระยะเวลาค้าง และอายุของงานที่ถูก Blocked
+- ผลทดสอบซ้ำ จำนวนข้อบกพร่องและการแก้ไข
+- ความครอบคลุมของความต้องการและกรณีทดสอบ
+- ความพร้อมหลักฐานตรวจรับแต่ละงวด
+- ความพร้อมของงานที่ต้องพึ่งพาระหว่างทีม
+- สถานะผ่านเกณฑ์ความปลอดภัยโดยไม่เปิดเผยรายละเอียดลับ
 
-## Management metrics (definitions, not real measurements)
-- **Sprint Goal success:** did the Increment satisfy the stated goal?
-- **Work item flow:** started/finished counts, aging WIP, blocked days, cycle time.
-- **Integrated quality:** regression status, unresolved defect severity distribution, rework ratio.
-- **Acceptance coverage:** mapped functional requirements, test cases and UAT scenarios.
-- **Release evidence readiness:** M1–M4 checklist completeness and exceptions.
-- **Dependency readiness:** unresolved dependency count and owners.
-- **Security/privacy acceptance:** controlled gate pass status only, no findings in public.
-
-Do not display fictitious velocity, progress percentages or calendar status as factual. Avoid using Story Points to compare individual developers or teams.
-
-## Definition of decision-ready
-Every review includes Product Goal connection, demonstration or verified artifact, blockers/dependencies, changes to forecast, next actions and owner. Legal/business rule decisions use an approved, controlled decision record.
+ห้ามใช้ Story Points เพื่อจัดอันดับผลงานบุคคล และห้ามรายงานความคืบหน้าที่ไม่มีข้อมูลจริง
