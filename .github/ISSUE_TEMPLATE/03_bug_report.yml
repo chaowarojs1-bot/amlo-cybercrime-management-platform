@@ -1,0 +1,51 @@
+name: "Sanitized Bug / Defect"
+description: "Track a test issue without exposing confidential data or exploit details"
+title: "[BUG][Squad] "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not post actual records, credentials, exploit details, internal URLs, production logs or vulnerability results. Security-sensitive defects belong in an approved private tracker; use only a generic pointer here."
+  - type: input
+    id: related
+    attributes:
+      label: Related Story / Epic
+      placeholder: "#issue number"
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Priority for triage
+      options:
+        - "Blocking"
+        - "High"
+        - "Normal"
+        - "Low"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: "Describe public-safe expected outcome"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Observed behavior (sanitized)
+      placeholder: "Generic symptom only, no private screenshot or log"
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Verification evidence and regression check
+      placeholder: "Safe reference or synthetic reproduction description"
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: "No sensitive records, operational details or exploit steps are included."
+          required: true
