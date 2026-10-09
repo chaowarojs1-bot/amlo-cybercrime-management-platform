@@ -1,55 +1,44 @@
-# GitHub Projects v2 — Board Configuration Blueprint
+# คู่มือจัดตั้งกระดาน GitHub Projects สำหรับ Scrum
 
-**Status:** Configuration specification only. Epics and Stories are already GitHub Issues. **A native GitHub Projects v2 board, fields, iterations and automation have NOT been provisioned via this connection**; they require an authorized Projects administrator / GitHub UI access. Do not mistake planning files for an active board.
+**สถานะ:** เป็นข้อกำหนดสำหรับการตั้งค่าเท่านั้น ยังไม่ได้สร้างกระดาน Projects v2 พร้อมฟิลด์และระบบอัตโนมัติจริง
 
-## Create one program-level GitHub Project
-Suggested project title: `AMLO Cybercrime — Program Scrum`
+## ชื่อกระดานที่เสนอ
+**AMLO Cybercrime — Program Scrum**
 
-### Fields
-| Field | Type | Suggested values |
+## ฟิลด์ที่ต้องตั้งค่า
+| ฟิลด์ | ประเภท | ค่าแนะนำ |
 |---|---|---|
-| Status | Single select | Product Backlog, Ready, In Progress, Code Review, Testing, PO Review, Done |
-| Type | Single select | Epic, Story, Task, Bug, Enabler, Gate |
-| Squad | Single select | A Platform, B Analytics, C Case, D Claim/Refund, E Citizen/BI, Shared, Cross-team |
-| Priority | Single select | P0 Critical, P1 High, P2 Normal, P3 Later (confirm with PO) |
-| Sprint | Iteration | 2-week planning cycle, adjusted from signed start date |
-| Target Gate | Single select | D30, D120, D210, D240, Not Applicable |
-| Story Points | Number | Blank until Developers estimate |
-| Blocked | Single select | No, Yes |
-| Blocked Since | Date | Only if blocked |
-| Owner | Person | Assign after staffing confirmed |
-| Due / forecast | Date | Optional: only for real deadlines or tracked forecast |
-| Dependency Reference | Text | GitHub Issue key/link or safe dependency ID |
-| Evidence/RTM Reference | Text | Public-safe ID or approved restricted reference |
+| Status | ตัวเลือกเดียว | Product Backlog, Ready, In Progress, Code Review, Testing, PO Review, Done |
+| Type | ตัวเลือกเดียว | Epic, Story, Task, Bug, Enabler, Gate |
+| Squad | ตัวเลือกเดียว | A, B, C, D, E, Shared, Cross-team |
+| Priority | ตัวเลือกเดียว | P0, P1, P2, P3 |
+| Sprint | รอบการทำงาน | รอบละสองสัปดาห์ ปรับตามวันเริ่มจริง |
+| Target Gate | ตัวเลือกเดียว | D30, D120, D210, D240, ไม่เกี่ยวข้อง |
+| Story Points | ตัวเลข | ให้ Developers ประเมิน |
+| Blocked | ตัวเลือกเดียว | Yes, No |
+| Blocked Since | วันที่ | ระบุเมื่อมีอุปสรรค |
+| Owner | ผู้รับผิดชอบ | กำหนดหลังยืนยันทีม |
+| Dependency Reference | ข้อความ | รหัส Issue หรือการพึ่งพา |
+| Evidence/RTM Reference | ข้อความ | รหัสหลักฐานที่เปิดเผยได้ |
 
-Use the Project's built-in `Assignees` field when appropriate. Do not pre-assign fake staff or dates.
+## มุมมองที่แนะนำ
+1. **Program Master Board:** แสดงงานตาม Status
+2. **Product Backlog:** ตารางลำดับงานที่ Product Owner ดูแล
+3. **Squad A–E:** แยกมุมมองตามสายงาน
+4. **Current Sprint:** งานและเป้าหมายของ Sprint ปัจจุบัน
+5. **Dependency Watch:** งานที่ถูก Blocked และผู้รับผิดชอบ
+6. **Release & TOR Gate:** สถานะหลักฐานแต่ละงวด
+7. **Quality & Security:** ผลทดสอบในระดับที่เปิดเผยได้
+8. **Executive Overview:** ภาพรวมงาน ความเสี่ยง และความพร้อมตรวจรับ
 
-### Saved views
-1. **Program Master Board** — Board grouped by Status; show Squad, Priority, Sprint, Blocked and Gate; filters exclude closed duplicates.
-2. **Product Backlog** — Table ordered by Priority, Epic/Product Value, dependencies and PO order; all Stories not assigned to current Sprint.
-3. **Squad A–E** — Board view filtered by Squad with common workflow.
-4. **Current Sprint** — Board/table filter Sprint = current iteration, show Sprint Goal reference.
-5. **Dependency Watch** — Table filter Blocked = Yes, columns owner/blocked-since/dependency.
-6. **Release & TOR Gate** — Table/group by Target Gate; link milestone acceptance issues.
-7. **Quality & Security** — View by Shared QA/Security issues and open release-blocking bugs (no restricted details).
-8. **Executive Overview** — Summary by status, gate, team, due risks and accepted work (never fabricate % completion).
+## แนวทางตั้งค่า
+1. ผู้ดูแล GitHub สร้าง Project ภายใต้บัญชีเจ้าของ Repository
+2. เพิ่ม Issues ที่มีอยู่ลง Project
+3. สร้างฟิลด์และมุมมองตามตาราง
+4. กำหนดสิทธิ์ให้ Product Owner จัดลำดับและทีมดูแลสถานะ
+5. ตั้ง Iteration ตามวันเริ่มสัญญาที่ได้รับการยืนยัน
+6. เชื่อมกระบวนการ Pull Request กับ Code Review/Testing ตามความเหมาะสม
+7. ปิดงานเมื่อผ่าน Definition of Done เท่านั้น
+8. ตรวจรับ TOR แยกจากการปิด Issue
 
-### Workflow and automation guidance
-- Newly added Story → Product Backlog by default; add item to Program Project.
-- Pull request checks/reviews may inform Code Review or Testing, but must not automatically mark Done without meeting DoD.
-- Done only after quality review; contractual acceptance recorded separately.
-- Flag Blocked on current stage, enter owner/reason/next action in safe form; clear only after verification.
-- At Sprint Planning select a realistic set, agree Sprint Goal and assign current Sprint field.
-- Once items pass the Done policy, close Issues. Do not use closing as a shortcut for formal acceptance.
-- Use Project charts for item throughput/aging; evidence completeness and actual release risks require separate inspection.
-
-## Procedure for admin
-1. Open repository owner GitHub Projects and create a new Project (board/table template).
-2. Add this repository's Issues to the Project; ensure repo connection or manual bulk-add.
-3. Create custom fields above and views with appropriate filters.
-4. Establish write permissions; Product Owner sets ordering, Developers maintain estimates/status.
-5. Configure initial iterations aligned to signed start date; **do not lock Oct 1 2026 as actual without confirmation**.
-6. Review field mapping with team and update Issue templates if Project configuration changes.
-
-## Public disclosure
-This repository is public. Never put live identities/case records, contract-confidential material, private network details or security vulnerabilities into Projects custom text fields.
+ห้ามใส่ข้อมูลจริงของคดีหรือรายละเอียดความปลอดภัยที่เป็นความลับในฟิลด์ข้อความ
