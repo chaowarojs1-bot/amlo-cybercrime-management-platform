@@ -42,9 +42,9 @@ def load(number):
  p["items_sanitized"]=items
  return p
 def main():
- a=load(1);b=load(2)
+ a=load(1);b=load(2);backup=load(3)
  def ids(p):return {x["content"]["id"] for x in p["items_sanitized"] if x.get("content") and x["content"].get("id")}
- for p in [a,b]:
+ for p in [a,b,backup]:
   its=p["items_sanitized"];private=sum(1 for i in its if i.get("content") and (i["content"].get("repository") or {}).get("isPrivate"))
   drafts=sum(1 for i in its if i["type"]=="DRAFT_ISSUE")
   fields=[f["name"]+" ("+f["dataType"]+")" for f in p["fields"]["nodes"]]
