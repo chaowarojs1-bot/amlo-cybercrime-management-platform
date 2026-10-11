@@ -1,0 +1,36 @@
+name: "แทนที่ Project #1 ด้วย #2 และเปิด Public (QR เดิม)"
+
+on:
+  push:
+    paths:
+      - 'project-management/migration/CONFIRM_COPY_2_TO_1_PUBLIC.txt'
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "พิมพ์ COPY_PROJECT_2_INTO_PROJECT_1_PUBLIC เพื่อยืนยัน"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: amlo-mirror-github-project-2-to-1
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    if: >-
+      (github.event_name == 'push' && github.actor == 'chaowarojs1-bot' && github.event.head_commit.message == 'AMLO APPROVED: COPY PROJECT 2 TO PROJECT 1 PUBLIC') ||
+      (github.event_name == 'workflow_dispatch' && inputs.confirmation == 'COPY_PROJECT_2_INTO_PROJECT_1_PUBLIC')
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: โหลด Repository
+        uses: actions/checkout@v4
+      - name: ตรวจสอบ Python syntax
+        run: python3 -m py_compile scripts/mirror_project_2_to_1.py
+      - name: สำรองและคัดลอก GitHub Project โดยเก็บ URL #1 ไว้
+        env:
+          AMLO_PROJECT_TOKEN: ${{ secrets.AMLO_PROJECT_TOKEN }}
+        run: python3 scripts/mirror_project_2_to_1.py --mode apply --confirmation COPY_PROJECT_2_INTO_PROJECT_1_PUBLIC
