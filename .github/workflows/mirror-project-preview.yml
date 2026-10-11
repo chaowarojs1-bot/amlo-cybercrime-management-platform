@@ -1,0 +1,24 @@
+name: "ตรวจสอบก่อนคัดลอก Project #2 ไป #1"
+
+on:
+  push:
+    paths:
+      - 'scripts/mirror_project_2_to_1.py'
+      - '.github/workflows/mirror-project-preview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: ตรวจสอบสคริปต์
+        run: python3 -m py_compile scripts/mirror_project_2_to_1.py
+      - name: ตรวจ Project 1 และ Project 2 โดยไม่แก้ไข
+        env:
+          AMLO_PROJECT_TOKEN: ${{ secrets.AMLO_PROJECT_TOKEN }}
+        run: python3 scripts/mirror_project_2_to_1.py --mode preview
