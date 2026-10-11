@@ -174,8 +174,8 @@ def ensure_backup(original):
         original_drafts=sum(x["type"]=="DRAFT_ISSUE" for x in active_items(original))
         if saved_drafts < original_drafts:
             raise MirrorError("Backup project มี Draft Issues ไม่ครบ")
-        if {v["name"] for v in backup["views"]["nodes"]}!={v["name"] for v in original["views"]["nodes"]}:
-            raise MirrorError("Backup project มี Views ไม่ครบ")
+        if not {v["name"] for v in backup["views"]["nodes"]}.issubset({v["name"] for v in original["views"]["nodes"]}):
+            raise MirrorError("Backup project มี Views ไม่สอดคล้องกับต้นฉบับ")
         print("ใช้สำเนาสำรองส่วนตัวที่มีอยู่แล้ว:",backup["url"])
         return backup
     result=mutation("copyProjectV2","CopyProjectV2Input","projectV2{id number url public}",
