@@ -92,7 +92,7 @@ query($login:String!,$number:Int!,$after:String){
  }}
  }
  }}
-}}}
+}}
 '''
 
 def read_project(number):
