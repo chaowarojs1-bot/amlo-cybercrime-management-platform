@@ -1,0 +1,25 @@
+name: "ตรวจสอบ Project #1 และ #2 ก่อนแทนที่ (QR เดิม)"
+
+on:
+  push:
+    paths:
+      - 'scripts/audit_projects_1_2.py'
+      - '.github/workflows/audit-projects-1-2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: โหลด Repository
+        uses: actions/checkout@v4
+      - name: ตรวจ Python syntax
+        run: python3 -m py_compile scripts/audit_projects_1_2.py
+      - name: Read-only inspect Project #1 / #2 (no changes)
+        env:
+          AMLO_PROJECT_TOKEN: ${{ secrets.AMLO_PROJECT_TOKEN }}
+        run: python3 scripts/audit_projects_1_2.py
