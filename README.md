@@ -4,13 +4,17 @@
 
 > **ข้อควรระวัง:** คลังนี้เป็นสาธารณะ ห้ามเผยแพร่ข้อมูลผู้เสียหาย ข้อมูลคดี บัญชีธนาคาร หลักฐานจริง รหัสผ่าน ระบบเครือข่ายภายใน หรือผลการตรวจสอบช่องโหว่
 
-## ติดตั้ง GitHub Projects v2 แบบ Kanban จริง
+## กระดานหลัก: GitHub Projects v2 แบบ Kanban (Public)
 
-- [คู่มือติดตั้งฉบับภาษาไทย](./project-management/GITHUB_PROJECTS_V2_INSTALL_TH.md)
-- [GitHub Actions: สร้าง Projects v2 จริง](./.github/workflows/create-github-project-v2.yml)
-- [สคริปต์เชื่อม Issues เดิมเข้าสู่ Project](./scripts/install_github_project_v2.py)
+**[เปิด AMLO Cybercrime — Scrum & TOR Kanban (Project #1)](https://github.com/users/chaowarojs1-bot/projects/1)**
 
-**สถานะ:** เตรียมตัวติดตั้งแล้ว แต่ยังไม่ได้สร้าง Native GitHub Projects v2 ในบัญชีจริง ต้องเพิ่ม Secret `AMLO_PROJECT_TOKEN` และรัน Workflow แบบ `install` ก่อน เมื่อเสร็จจะเห็นลิงก์ Projects จริงใน Job Summary; กระดาน Markdown ด้านล่างยังเป็นข้อมูลที่มีอยู่เดิม
+- กระดานหลัก **Public** รักษา URL เดิมสำหรับ QR Code และใช้ GitHub Issues ชุดเดิม **116 รายการ**
+- ย้ายข้อมูลจาก [Project #2](https://github.com/users/chaowarojs1-bot/projects/2) แล้ว โดยคง Project #2 เป็น Private และไม่แก้ไขต้นทาง
+- มี **6 มุมมอง** ตามโครงสร้างจาก Project #2 ได้แก่ Scrum, Program, Delivery, Sprints, All Work และ View 1
+- Draft Issues เดิม 12 รายการของ Project #1 ถูกเก็บใน Archive และสำรองไว้ใน [Project #3 (Private)](https://github.com/users/chaowarojs1-bot/projects/3)
+- [ผลการย้ายที่สำเร็จใน GitHub Actions](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/actions/runs/38131158150)
+
+**ข้อควรทราบ:** GitHub Projects คือกระดานบริหารงานหลัก ไม่ใช่ Markdown Board; ค่า Status ใน Projects ไม่ได้ซิงก์กับ Labels ของ Issues โดยอัตโนมัติ ต้องตรวจการตั้งค่า Group by/Sort และสิทธิ์การเข้าถึงแต่ละ View ตามการใช้งานจริง
 
 ## เปิดกระดานบริหารงานบน GitHub
 
@@ -49,7 +53,7 @@
 - [เปิดรายการงาน GitHub Issues](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues)
 
 ## สถานะกระดานบน GitHub
-**สร้าง Scrum Board, Program Board และ Delivery Board แบบ Markdown แล้ว** และเพิ่ม GitHub Actions สำหรับสร้าง Labels และซิงก์จาก Issues (ต้องรัน Workflow และยืนยันสิทธิ์ก่อน) **ยังไม่ได้สร้าง GitHub Projects v2 แบบ Kanban ที่ลากการ์ดได้**
+**สร้าง GitHub Projects v2 แบบ Kanban จริงแล้ว** ที่ [Project #1 (Public)](https://github.com/users/chaowarojs1-bot/projects/1) พร้อม 116 Issues และ 6 มุมมอง ส่วน Markdown Boards ยังเก็บไว้เป็นรายงานประกอบซึ่งไม่ซิงก์สองทางกับ Status ของ Projects
 
 ## เอกสารเดิม
 - [แผนบริหารโครงการ](./project-management/PROJECT_MASTER_PLAN_PUBLIC.md)
