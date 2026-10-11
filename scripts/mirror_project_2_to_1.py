@@ -297,6 +297,8 @@ def copy_items(src,dst):
         for name,datatype,value in source_values(record):
             if name not in fields or name not in source_fields:continue
             f=fields[name]
+            if f["dataType"] not in ("SINGLE_SELECT","MULTI_SELECT","NUMBER","TEXT","DATE","ITERATION"):
+                continue  # GitHub built-ins like Title/Assignees are shared via linked Issue, not written
             if datatype!=f["dataType"]:raise MirrorError("ประเภทข้อมูลฟิลด์ไม่ตรงกัน: "+name)
             if datatype=="SINGLE_SELECT":
                 matching=[x for x in opts(f) if x["name"]==value]
