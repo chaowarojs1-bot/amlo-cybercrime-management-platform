@@ -4,6 +4,14 @@
 
 > **ข้อควรระวัง:** คลังนี้เป็นสาธารณะ ห้ามเผยแพร่ข้อมูลผู้เสียหาย ข้อมูลคดี บัญชีธนาคาร หลักฐานจริง รหัสผ่าน ระบบเครือข่ายภายใน หรือผลการตรวจสอบช่องโหว่
 
+## ติดตั้ง GitHub Projects v2 แบบ Kanban จริง
+
+- [คู่มือติดตั้งฉบับภาษาไทย](./project-management/GITHUB_PROJECTS_V2_INSTALL_TH.md)
+- [GitHub Actions: สร้าง Projects v2 จริง](./.github/workflows/create-github-project-v2.yml)
+- [สคริปต์เชื่อม Issues เดิมเข้าสู่ Project](./scripts/install_github_project_v2.py)
+
+**สถานะ:** เตรียมตัวติดตั้งแล้ว แต่ยังไม่ได้สร้าง Native GitHub Projects v2 ในบัญชีจริง ต้องเพิ่ม Secret `AMLO_PROJECT_TOKEN` และรัน Workflow แบบ `install` ก่อน เมื่อเสร็จจะเห็นลิงก์ Projects จริงใน Job Summary; กระดาน Markdown ด้านล่างยังเป็นข้อมูลที่มีอยู่เดิม
+
 ## เปิดกระดานบริหารงานบน GitHub
 
 - **[Scrum Board — กระดานพัฒนา 75 User Stories](./project-management/SCRUM_BOARD.md)**
