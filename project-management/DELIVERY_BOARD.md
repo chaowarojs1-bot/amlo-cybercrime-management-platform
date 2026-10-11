@@ -18,7 +18,6 @@
 
 ## Sprint Tracker ทั้ง 17 รอบ (สถานะ Proposed)
 
-- [#93 ［STORY］［Governance］［GOV-02］ Set synchronized sprint cadence and team working agreements](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/93)
 - [#103 ［SPRINT］［S01］ Establish product ownership and governance foundation — Proposed](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/103)
 - [#104 ［SPRINT］［S02］ Make source/operating constraints inspectable — Proposed](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/104)
 - [#105 ［SPRINT］［S03］ Demonstrate initial design and M1 readiness — Proposed](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/105)
