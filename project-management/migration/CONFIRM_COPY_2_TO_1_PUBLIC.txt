@@ -8,3 +8,5 @@ Confirmation: COPY_PROJECT_2_INTO_PROJECT_1_PUBLIC
 Second attempt: backup #3 checked as PRIVATE; all 12 original draft items and existing views are preserved. Four linked GitHub issues remain in the source repository.
 
 Third attempt: skip read-only GitHub built-in fields such as Title, copy only writable Project custom field values.
+
+Fourth attempt: backup #3 safely preserves 12 original draft issues and pre-migration views; preserve QR Project #1.
