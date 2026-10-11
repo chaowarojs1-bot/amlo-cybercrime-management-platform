@@ -1,22 +1,22 @@
-# Delivery Board — TOR 4 งวด
+# Delivery Board — ตรวจรับตาม TOR
 
-> **กระดาน GitHub Issues (Markdown)** ไม่ใช่ GitHub Projects v2 · สร้างข้อมูลตั้งต้นจาก Issues เดิม
-> ไม่ยืนยันว่ารายการงานเริ่มแล้ว เสร็จแล้ว หรือผ่านการตรวจรับตาม TOR
+> กระดานจาก GitHub Issues ไม่ใช่ GitHub Projects v2 | ไม่แสดงข้อมูลคดีจริงหรือหลักฐานลับ
+> ปิด Issue ไม่เท่ากับผ่าน Definition of Done / UAT / การตรวจรับ TOR
 
-[Scrum Board](./SCRUM_BOARD.md) · [Program Board](./PROGRAM_BOARD.md) · [Delivery Board](./DELIVERY_BOARD.md) · [คู่มือ](./BOARD_USER_GUIDE_TH.md)
+[Scrum](./SCRUM_BOARD.md) · [Program](./PROGRAM_BOARD.md) · [Delivery](./DELIVERY_BOARD.md) · [คู่มือ](./BOARD_USER_GUIDE_TH.md)
 
-## จุดตรวจรับตาม TOR
+## จุดตรวจรับ (D30 / D120 / D210 / D240)
 
-| งวด | กำหนด | Issue | สถานะเริ่มต้น |
-|---|---|---|---|
-| M1 | D30 | [#99 ［GATE］［M1］［D30］ Mobilization & Governance](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/99) | ยังไม่ได้ยืนยันการตรวจรับ |
-| M2 | D120 | [#100 ［GATE］［M2］［D120］ Requirements, Design & Prototype](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/100) | ยังไม่ได้ยืนยันการตรวจรับ |
-| M3 | D210 | [#101 ［GATE］［M3］［D210］ Integrated System & Verification](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/101) | ยังไม่ได้ยืนยันการตรวจรับ |
-| M4 | D240 | [#102 ［GATE］［M4］［D240］ Go-live, Training & Handover](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/102) | ยังไม่ได้ยืนยันการตรวจรับ |
+| วัน | Gate | สถานะ |
+|---|---|---|
+| D30 | [#99 ［GATE］［M1］［D30］ Mobilization & Governance](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/99) | ยังไม่ยืนยัน |
+| D120 | [#100 ［GATE］［M2］［D120］ Requirements, Design & Prototype](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/100) | ยังไม่ยืนยัน |
+| D210 | [#101 ［GATE］［M3］［D210］ Integrated System & Verification](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/101) | ยังไม่ยืนยัน |
+| D240 | [#102 ［GATE］［M4］［D240］ Go-live, Training & Handover](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/102) | ยังไม่ยืนยัน |
 
-**หลักการ:** การปิด Issue ไม่เท่ากับการตรวจรับอย่างเป็นทางการ ต้องมีหลักฐานการอนุมัติตามสัญญา
+สถานะ gate:accepted จะใช้ได้ต่อเมื่อมีหลักฐานตรวจรับอย่างเป็นทางการ ไม่ใช่ผลจากการปิด Issue
 
-## Sprint Tracker ทั้ง 17 รอบ (สถานะ Proposed)
+## Sprint Trackers (ยังเป็นแผน)
 
 - [#103 ［SPRINT］［S01］ Establish product ownership and governance foundation — Proposed](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/103)
 - [#104 ［SPRINT］［S02］ Make source/operating constraints inspectable — Proposed](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/104)
@@ -36,4 +36,5 @@
 - [#118 ［SPRINT］［S16］ Complete security, cutover and handover readiness — Proposed](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/118)
 - [#119 ［SPRINT］［S17］ Train, deploy, hand over and prepare final gate — Proposed](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/119)
 
-วันเริ่มต้น 1 ต.ค. 2569 เป็นเพียงสมมติฐานสำหรับวางแผน ไม่ใช่วันเริ่มสัญญาที่ยืนยันแล้ว
+วันที่เริ่มสัญญา 1 ตุลาคม 2569 ใน Roadmap เป็นตัวอย่าง ต้องยืนยันวันเริ่มจริง
+

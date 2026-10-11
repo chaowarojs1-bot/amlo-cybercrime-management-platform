@@ -1,17 +1,18 @@
 # Scrum Board — AMLO Cybercrime
 
-> **กระดาน GitHub Issues (Markdown)** ไม่ใช่ GitHub Projects v2 · สร้างข้อมูลตั้งต้นจาก Issues เดิม
-> ไม่ยืนยันว่ารายการงานเริ่มแล้ว เสร็จแล้ว หรือผ่านการตรวจรับตาม TOR
+> กระดานจาก GitHub Issues ไม่ใช่ GitHub Projects v2 | ไม่แสดงข้อมูลคดีจริงหรือหลักฐานลับ
+> ปิด Issue ไม่เท่ากับผ่าน Definition of Done / UAT / การตรวจรับ TOR
 
-[Scrum Board](./SCRUM_BOARD.md) · [Program Board](./PROGRAM_BOARD.md) · [Delivery Board](./DELIVERY_BOARD.md) · [คู่มือ](./BOARD_USER_GUIDE_TH.md)
+[Scrum](./SCRUM_BOARD.md) · [Program](./PROGRAM_BOARD.md) · [Delivery](./DELIVERY_BOARD.md) · [คู่มือ](./BOARD_USER_GUIDE_TH.md)
 
-## ภาพรวมสถานะเริ่มต้น
+## กระดานสถานะงาน
 
 | Product Backlog | Ready | In Progress | Code Review | Testing | PO Review | Done |
 | --- | --- | --- | --- | --- | --- | --- |
 | 75 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**75 User Stories** ยังไม่มี Label สถานะที่ยืนยัน จึงแสดงใน Product Backlog เท่านั้น ข้อมูลจะอัปเดตเมื่อรัน Workflow หลังการปรับ Label
+User Stories เปิดอยู่: 75 | รายการที่ปิดแล้ว: 3
+งานที่ยังไม่มี status label เริ่มต้นที่ Product Backlog; สถานะอื่นต้องมีผู้รับผิดชอบปรับ Label
 
 ## Product Backlog (75)
 
@@ -116,32 +117,30 @@
 
 ## Ready (0)
 
-_ยังไม่มีงานที่ยืนยันสถานะนี้_
+_ไม่มีรายการ_
 
 ## In Progress (0)
 
-_ยังไม่มีงานที่ยืนยันสถานะนี้_
+_ไม่มีรายการ_
 
 ## Code Review (0)
 
-_ยังไม่มีงานที่ยืนยันสถานะนี้_
+_ไม่มีรายการ_
 
 ## Testing (0)
 
-_ยังไม่มีงานที่ยืนยันสถานะนี้_
+_ไม่มีรายการ_
 
 ## PO Review (0)
 
-_ยังไม่มีงานที่ยืนยันสถานะนี้_
+_ไม่มีรายการ_
 
 ## Done (0)
 
-_ยังไม่มีงานที่ยืนยันสถานะนี้_
+_ไม่มีรายการ_
 
-## Issues ปิดแล้ว (ซ้ำ/ไม่ใช่งานที่กำลังทำ)
+## Issues ที่ปิดแล้ว — ไม่เท่ากับผ่าน TOR
 
 - [#41 ［STORY］［B］［TXN-01］ Define transaction entity and relationship model](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/41)
 - [#42 ［STORY］［B］［TXN-02］ Build authorized transaction search and filtering](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/42)
 - [#43 ［STORY］［B］［TXN-03］ Visualize relationships and transaction paths](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/43)
-
-[ทะเบียน Sprint 17 รอบ](./SPRINT_ISSUE_REGISTER_PUBLIC.md)
