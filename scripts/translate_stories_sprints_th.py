@@ -77,6 +77,9 @@ def get_meta(source):
     forecast=metadata(body,"forecast")
     priority=metadata(body,"priority")
     dependencies=metadata(body,"dependencies")
+    if not dependencies:
+        inline=re.search(r"(?i)\*\*(?:Dependencies|Dependency):\*\*\s*([^\n|]+)",body)
+        if inline:dependencies=inline.group(1).strip()
     if dependencies:
         dependencies=dependencies.split(";")[0].replace("**","").strip().rstrip(".")
     # Some source issues have inline "**Forecast:**" or proposed sprint texts;
