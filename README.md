@@ -4,6 +4,15 @@
 
 > **ข้อควรระวัง:** คลังนี้เป็นสาธารณะ ห้ามเผยแพร่ข้อมูลผู้เสียหาย ข้อมูลคดี บัญชีธนาคาร หลักฐานจริง รหัสผ่าน ระบบเครือข่ายภายใน หรือผลการตรวจสอบช่องโหว่
 
+## เปิดกระดานบริหารงานบน GitHub
+
+- **[Scrum Board — กระดานพัฒนา 75 User Stories](./project-management/SCRUM_BOARD.md)**
+- **[Program Board — ภาพรวม 16 Epics](./project-management/PROGRAM_BOARD.md)**
+- **[Delivery Board — ตรวจรับ TOR 4 งวด และ Sprint 17 รอบ](./project-management/DELIVERY_BOARD.md)**
+- [คู่มือเปลี่ยนสถานะและซิงก์กระดานฉบับภาษาไทย](./project-management/BOARD_USER_GUIDE_TH.md)
+
+กระดานเหล่านี้เป็นหน้าบน GitHub Repository ที่สร้างจาก GitHub Issues เดิม ไม่ใช่ GitHub Projects v2 แบบลากการ์ด ระบบซิงก์ผ่าน GitHub Actions เมื่อเปิดใช้งานและรัน Workflow
+
 ## กรอบการดำเนินงาน
 - ระยะเวลาตามแผน TOR: **240 วันปฏิทิน**
 - จุดส่งมอบตามสัญญา: วันที่ 30, 120, 210 และ 240
@@ -31,8 +40,8 @@
 - จุดตรวจรับ TOR 4 รายการ: [วันที่ 30](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/99), [วันที่ 120](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/100), [วันที่ 210](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/101), [วันที่ 240](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues/102)
 - [เปิดรายการงาน GitHub Issues](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/issues)
 
-## สถานะกระดาน GitHub Projects
-**สร้าง Issues และเอกสารแล้ว แต่ยังไม่ได้สร้างกระดาน GitHub Projects v2 ที่มีฟิลด์และระบบอัตโนมัติจริง** ให้ผู้ดูแลตั้งค่าตามคู่มือที่แนบ
+## สถานะกระดานบน GitHub
+**สร้าง Scrum Board, Program Board และ Delivery Board แบบ Markdown แล้ว** และเพิ่ม GitHub Actions สำหรับสร้าง Labels และซิงก์จาก Issues (ต้องรัน Workflow และยืนยันสิทธิ์ก่อน) **ยังไม่ได้สร้าง GitHub Projects v2 แบบ Kanban ที่ลากการ์ดได้**
 
 ## เอกสารเดิม
 - [แผนบริหารโครงการ](./project-management/PROJECT_MASTER_PLAN_PUBLIC.md)
