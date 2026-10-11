@@ -1,0 +1,36 @@
+name: "ปรับ User Stories และ Sprint Plan เป็นภาษาไทยจริง"
+
+on:
+  push:
+    paths:
+      - 'project-management/translation/CONFIRM_TRANSLATE_TH.txt'
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "พิมพ์ TRANSLATE_75_STORIES_17_SPRINTS_TH เพื่อยืนยัน"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: amlo-translate-stories-sprints
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    if: >-
+      (github.event_name == 'push' && github.actor == 'chaowarojs1-bot' && github.event.head_commit.message == 'AMLO APPROVED: TRANSLATE 75 STORIES AND 17 SPRINTS TO THAI') ||
+      (github.event_name == 'workflow_dispatch' && inputs.confirmation == 'TRANSLATE_75_STORIES_17_SPRINTS_TH')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: ตรวจสอบไวยากรณ์สคริปต์
+        run: python3 -m py_compile scripts/translate_stories_sprints_th.py
+      - name: แปลชื่อและเกณฑ์ยอมรับ โดยคงข้อมูล Issues เดิม
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/translate_stories_sprints_th.py --mode apply --confirm TRANSLATE_75_STORIES_17_SPRINTS_TH
