@@ -1,0 +1,38 @@
+name: "ติดตั้ง GitHub Projects v2 Kanban — AMLO"
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "ตรวจสอบรายการงานก่อน (validate) หรือสร้างกระดานจริง (install)"
+        type: choice
+        options:
+          - validate
+          - install
+        required: true
+        default: validate
+
+permissions:
+  contents: read
+  issues: read
+
+concurrency:
+  group: amlo-create-project-v2
+  cancel-in-progress: false
+
+jobs:
+  setup:
+    name: ตรวจสอบและจัดตั้ง GitHub Projects v2
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: โหลด Repository
+        uses: actions/checkout@v4
+      - name: ตรวจสอบ Python script ก่อนรัน
+        run: python3 -m py_compile scripts/install_github_project_v2.py
+      - name: สร้างหรือยืนยันกระดาน Kanban จาก GitHub Issues
+        env:
+          AMLO_PROJECT_TOKEN: ${{ secrets.AMLO_PROJECT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INSTALL_MODE: ${{ inputs.mode }}
+        run: python3 scripts/install_github_project_v2.py --mode "$INSTALL_MODE"
