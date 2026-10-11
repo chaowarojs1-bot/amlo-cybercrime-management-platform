@@ -1,0 +1,30 @@
+name: "ตรวจสอบคำแปลภาษาไทย — 75 เรื่องงาน 17 สปรินต์"
+
+on:
+  push:
+    paths:
+      - 'scripts/translate_stories_sprints_th.py'
+      - 'project-management/translation/*.json'
+      - '.github/workflows/validate-thai-stories-sprints.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: read
+
+concurrency:
+  group: amlo-translate-stories-sprints
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: ตรวจสอบสคริปต์
+        run: python3 -m py_compile scripts/translate_stories_sprints_th.py
+      - name: ตรวจว่ารายการงานและสปรินต์ยังตรงกับข้อมูลเดิม
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/translate_stories_sprints_th.py --mode validate
