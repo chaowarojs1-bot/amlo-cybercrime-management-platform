@@ -170,8 +170,12 @@ def ensure_backup(original):
         if match[0]["public"]:
             raise MirrorError("Backup project มีสถานะ Public อย่างไม่คาดคิด")
         backup=read_project(match[0]["number"])
-        if len(active_items(backup)) < 16:
-            raise MirrorError("Backup project ไม่ครบ 16 รายการ หยุดเพื่อรักษาข้อมูล")
+        saved_drafts=sum(x["type"]=="DRAFT_ISSUE" for x in active_items(backup))
+        original_drafts=sum(x["type"]=="DRAFT_ISSUE" for x in active_items(original))
+        if saved_drafts < original_drafts:
+            raise MirrorError("Backup project มี Draft Issues ไม่ครบ")
+        if {v["name"] for v in backup["views"]["nodes"]}!={v["name"] for v in original["views"]["nodes"]}:
+            raise MirrorError("Backup project มี Views ไม่ครบ")
         print("ใช้สำเนาสำรองส่วนตัวที่มีอยู่แล้ว:",backup["url"])
         return backup
     result=mutation("copyProjectV2","CopyProjectV2Input","projectV2{id number url public}",
@@ -181,11 +185,11 @@ def ensure_backup(original):
     print("สร้างสำเนาสำรอง Private:",result["url"])
     for attempt in range(12):
         backup=read_project(result["number"])
-        if len(active_items(backup)) >= len(active_items(original)):
+        if sum(x["type"]=="DRAFT_ISSUE" for x in active_items(backup)) >= sum(x["type"]=="DRAFT_ISSUE" for x in active_items(original)):
             break
         time.sleep(3)
-    if len(active_items(backup)) < len(active_items(original)):
-        raise MirrorError("สำเนาสำรองยังไม่ครบ ยุติก่อนแก้ไข Project #1")
+    if sum(x["type"]=="DRAFT_ISSUE" for x in active_items(backup)) < sum(x["type"]=="DRAFT_ISSUE" for x in active_items(original)):
+        raise MirrorError("สำเนาสำรอง Draft Issues ไม่ครบ ยุติก่อนแก้ไข Project #1")
     if not all(x["type"]!="DRAFT_ISSUE" for x in active_items(original)):
         if sum(x["type"]=="DRAFT_ISSUE" for x in active_items(backup)) < sum(x["type"]=="DRAFT_ISSUE" for x in active_items(original)):
             raise MirrorError("สำเนาสำรองไม่มี Draft Issues ครบ ยุติ")
