@@ -16,6 +16,16 @@
 
 **ข้อควรทราบ:** GitHub Projects คือกระดานบริหารงานหลัก ไม่ใช่ Markdown Board; ค่า Status ใน Projects ไม่ได้ซิงก์กับ Labels ของ Issues โดยอัตโนมัติ ต้องตรวจการตั้งค่า Group by/Sort และสิทธิ์การเข้าถึงแต่ละ View ตามการใช้งานจริง
 
+## เรื่องราวผู้ใช้และแผนสปรินต์ภาษาไทย
+
+- **เรื่องราวผู้ใช้ 75 รายการ**: ปรับชื่อเรื่อง เนื้อหา เกณฑ์ยอมรับ และข้อมูลวางแผนเป็นภาษาไทยใน GitHub Issues จริง โดยคงรหัส `IAM-01` เป็นต้น
+- **แผนสปรินต์ S01–S17**: ปรับชื่อและรายละเอียดทุก Sprint Tracker เป็นภาษาไทยแล้ว โดยยังคงเป็น **แผนที่เสนอ** ไม่ใช่ Sprint Goal ที่ยืนยัน
+- **GitHub Project #1 (Public)**: เปลี่ยนชื่อมุมมองเป็น `เรื่องงานผู้ใช้ | กระดานสกรัม` และ `แผนสปรินต์ | 17 รอบ` พร้อมฟิลด์ `แผนสปรินต์`; URL สำหรับ QR Code เดิมไม่เปลี่ยน
+- [ทะเบียนสปรินต์ 17 รอบ](./project-management/SPRINT_ISSUE_REGISTER_PUBLIC.md) · [แผนสปรินต์](./project-management/SPRINT_ROADMAP_PUBLIC.md) · [ทะเบียนรายการงานผลิตภัณฑ์](./project-management/PRODUCT_BACKLOG_REGISTER_PUBLIC.md)
+- [หลักฐานการแปล Issues](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/actions/runs/38134938710) · [หลักฐานการเปลี่ยนชื่อมุมมอง](https://github.com/chaowarojs1-bot/amlo-cybercrime-management-platform/actions/runs/38135094479)
+
+**หมายเหตุ:** รหัสสากลของ GitHub เช่น `[STORY]`, `[SPRINT]`, `S01`, `Epic`, `TOR` และชื่อฟิลด์เชิงเทคนิคบางส่วนคงไว้เพื่อการเชื่อมโยงข้อมูล ไม่ใช่คำบรรยายภาษาอังกฤษ และไม่กระทบหมายเลข Issues เดิม
+
 ## เปิดกระดานบริหารงานบน GitHub
 
 - **[Scrum Board — กระดานพัฒนา 75 User Stories](./project-management/SCRUM_BOARD.md)**
