@@ -119,3 +119,5 @@ def main():
     print("Issues:",len(issues))
 
 if __name__=="__main__": main()
+
+# ป้ายชื่องานที่แสดงใช้ชื่อ Issue ภาษาไทยล่าสุด โดยไม่เปลี่ยนสถานะงาน
