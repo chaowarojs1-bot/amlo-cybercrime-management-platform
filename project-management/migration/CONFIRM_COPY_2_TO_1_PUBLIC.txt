@@ -1,0 +1,6 @@
+AMLO Cybercrime — Public Project #1 (QR link)
+Approved action: copy existing Project #2 into the existing Project #1, without changing Project #1's URL.
+Safety requirements: back up #1 privately, retain old draft items in Archive, preserve #2 unchanged, use public GitHub Issues only.
+Do not publish real cases, victim details, private TOR annexes, secrets or security findings.
+Expected visible project items: 116; Public visibility; six source views.
+Confirmation: COPY_PROJECT_2_INTO_PROJECT_1_PUBLIC
