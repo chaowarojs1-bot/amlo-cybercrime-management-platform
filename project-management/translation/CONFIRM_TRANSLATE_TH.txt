@@ -1,0 +1,6 @@
+อนุมัติการปรับชื่อและรายละเอียดของ GitHub Issues เป็นภาษาไทย
+ขอบเขต: User Stories 75 รายการ และ Sprint Trackers 17 รอบ จากรายการงานเดิม
+การแก้ไขเฉพาะ title/body: ไม่เปลี่ยนสถานะ Labels ผู้รับผิดชอบ หมายเลข Issue หรือ Project
+คงรหัสงาน IAM, CFG, INT, TXN, CASE, CLM, REF, BOT, RPT, DASH, OPS, SEC, QA, UX, GOV และ S01-S17
+ยังไม่มีการยืนยัน Sprint Goal, วันที่เริ่มสัญญา หรือผลการตรวจรับ TOR
+รหัสยืนยัน: TRANSLATE_75_STORIES_17_SPRINTS_TH
