@@ -1,0 +1,31 @@
+name: "ปรับชื่อมุมมองเรื่องงานและแผนสปรินต์ใน Project #1 เป็นไทย"
+
+on:
+  push:
+    paths:
+      - 'project-management/translation/CONFIRM_VIEWS_TH.txt'
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "พิมพ์ LOCALIZE_STORY_SPRINT_VIEWS_TH"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  translate_project_views:
+    if: >-
+      (github.event_name == 'push' && github.actor == 'chaowarojs1-bot' && github.event.head_commit.message == 'AMLO APPROVED: LOCALIZE USER STORY AND SPRINT VIEWS') ||
+      (github.event_name == 'workflow_dispatch' && inputs.confirmation == 'LOCALIZE_STORY_SPRINT_VIEWS_TH')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: ตรวจสอบรูปแบบสคริปต์
+        run: python3 -m py_compile scripts/localize_project_1_views_th.py
+      - name: เปลี่ยนชื่อมุมมองและฟิลด์ใน Project #1
+        env:
+          AMLO_PROJECT_TOKEN: ${{ secrets.AMLO_PROJECT_TOKEN }}
+        run: python3 scripts/localize_project_1_views_th.py
